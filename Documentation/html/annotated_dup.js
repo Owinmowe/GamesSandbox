@@ -19,12 +19,15 @@ var annotated_dup =
         ] ]
       ] ]
     ] ],
-    [ "Utilities", "namespace_utilities.html", [
-      [ "MVP", "namespace_utilities_1_1_m_v_p.html", [
-        [ "IScreenControl", "interface_utilities_1_1_m_v_p_1_1_i_screen_control.html", "interface_utilities_1_1_m_v_p_1_1_i_screen_control" ],
-        [ "Presenter", "class_utilities_1_1_m_v_p_1_1_presenter.html", "class_utilities_1_1_m_v_p_1_1_presenter" ],
-        [ "ScriptableData", "class_utilities_1_1_m_v_p_1_1_scriptable_data.html", null ],
-        [ "View", "class_utilities_1_1_m_v_p_1_1_view.html", "class_utilities_1_1_m_v_p_1_1_view" ]
+    [ "General", "namespace_general.html", [
+      [ "Core", "namespace_general_1_1_core.html", [
+        [ "IGameLogic", "interface_general_1_1_core_1_1_i_game_logic.html", "interface_general_1_1_core_1_1_i_game_logic" ]
+      ] ],
+      [ "MVP", "namespace_general_1_1_m_v_p.html", [
+        [ "IScreenControl", "interface_general_1_1_m_v_p_1_1_i_screen_control.html", "interface_general_1_1_m_v_p_1_1_i_screen_control" ],
+        [ "Presenter", "class_general_1_1_m_v_p_1_1_presenter.html", "class_general_1_1_m_v_p_1_1_presenter" ],
+        [ "ScriptableData", "class_general_1_1_m_v_p_1_1_scriptable_data.html", null ],
+        [ "View", "class_general_1_1_m_v_p_1_1_view.html", "class_general_1_1_m_v_p_1_1_view" ]
       ] ]
     ] ]
 ];

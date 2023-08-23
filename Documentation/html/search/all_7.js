@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['presenter_0',['Presenter',['../class_utilities_1_1_m_v_p_1_1_presenter.html#adc3330523979b9786a7494bd470883b2',1,'Utilities.MVP.Presenter.Presenter()'],['../class_utilities_1_1_m_v_p_1_1_presenter.html',1,'Utilities.MVP.Presenter&lt; TV &gt;']]],
+  ['presenter_0',['Presenter',['../class_general_1_1_m_v_p_1_1_presenter.html',1,'General.MVP.Presenter&lt; TV &gt;'],['../class_general_1_1_m_v_p_1_1_presenter.html#ab4ce5f0aaf2c047bf2b5559b4c188b87',1,'General.MVP.Presenter.Presenter()']]],
   ['presenter_2ecs_1',['Presenter.cs',['../_presenter_8cs.html',1,'']]],
-  ['presenter_3c_20bottlegameview_20_3e_2',['Presenter&lt; BottleGameView &gt;',['../class_utilities_1_1_m_v_p_1_1_presenter.html',1,'Utilities::MVP']]]
+  ['presenter_3c_20bottlegameview_20_3e_2',['Presenter&lt; BottleGameView &gt;',['../class_general_1_1_m_v_p_1_1_presenter.html',1,'General::MVP']]]
 ];
