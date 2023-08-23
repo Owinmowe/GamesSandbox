@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['iscreencontrol_0',['IScreenControl',['../interface_utilities_1_1_m_v_p_1_1_i_screen_control.html',1,'Utilities::MVP']]],
-  ['iscreencontrol_2ecs_1',['IScreenControl.cs',['../_i_screen_control_8cs.html',1,'']]]
+  ['dispose_0',['Dispose',['../class_utilities_1_1_m_v_p_1_1_presenter.html#a0e181bb9aaec676d60a48c13a9286a48',1,'Utilities::MVP::Presenter']]]
 ];

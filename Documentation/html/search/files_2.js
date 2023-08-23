@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['scriptabledata_2ecs_0',['ScriptableData.cs',['../_scriptable_data_8cs.html',1,'']]]
+  ['iscreencontrol_2ecs_0',['IScreenControl.cs',['../_i_screen_control_8cs.html',1,'']]]
 ];

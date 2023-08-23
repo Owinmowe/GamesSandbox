@@ -102,9 +102,9 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base interface for controls in MVP design. This class is an extension of the View made to simplify the logic inside of it and separate each screen logic inside its own script.  <a href="interface_utilities_1_1_m_v_p_1_1_i_screen_control.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_utilities_1_1_m_v_p_1_1_presenter.html">Presenter</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for presenter in MVP design. This class is responsible of processing events received from the View with information received from ScriptableData (Model) classes. Then, if necessary, calls public methods in the view to affect the visual of the game. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">TV</td><td>The View associated to this Presenter.</td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for presenter in MVP design. This class is responsible of processing events received from the View with information received from ScriptableData (Model) classes. Then, if necessary, calls public methods in the view to affect the visual of the game. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TV</td><td>The type of data to get.</td></tr>
   </table>
   </dd>
 </dl>
@@ -112,6 +112,9 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_utilities_1_1_m_v_p_1_1_scriptable_data.html">ScriptableData</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for data created for each MVP screens. This data should only be accessed from the corresponding View and used in a Presenter class.  <a href="class_utilities_1_1_m_v_p_1_1_scriptable_data.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_utilities_1_1_m_v_p_1_1_view.html">View</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Base class for View in MVP design. This class is responsible of receiving events from controls and send that information to the corresponding Presenter. Then receiving actions from the presenter to affect the game or call controls to do it.  <a href="class_utilities_1_1_m_v_p_1_1_view.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->

@@ -99,9 +99,9 @@ $(document).ready(function(){initNavTree('class_utilities_1_1_m_v_p_1_1_presente
 </div><!--header-->
 <div class="contents">
 
-<p>Base class for presenter in MVP design. This class is responsible of processing events received from the View with information received from ScriptableData (Model) classes. Then, if necessary, calls public methods in the view to affect the visual of the game. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">TV</td><td>The View associated to this Presenter.</td></tr>
+<p>Base class for presenter in MVP design. This class is responsible of processing events received from the View with information received from ScriptableData (Model) classes. Then, if necessary, calls public methods in the view to affect the visual of the game. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TV</td><td>The type of data to get.</td></tr>
   </table>
   </dd>
 </dl>
@@ -122,9 +122,10 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:adc3330523979b9786a7494bd470883b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_utilities_1_1_m_v_p_1_1_presenter.html#adc3330523979b9786a7494bd470883b2">Presenter</a> (TV view)</td></tr>
+<tr class="memdesc:adc3330523979b9786a7494bd470883b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor made to cache or get necessary ScriptableData. There is no need to call AddViewListeners methods since its called on Presenter base class.  <br /></td></tr>
 <tr class="separator:adc3330523979b9786a7494bd470883b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16f2c0514d340d695eee88972dcdf75a"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_utilities_1_1_m_v_p_1_1_presenter.html#a16f2c0514d340d695eee88972dcdf75a">AddViewListeners</a> ()</td></tr>
-<tr class="memdesc:a16f2c0514d340d695eee88972dcdf75a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method for subscribing to events from the View.  <br /></td></tr>
+<tr class="memdesc:a16f2c0514d340d695eee88972dcdf75a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method for subscribing to events from the View. Note that this method will be called <b>AFTER</b> Presenters subclasses constructors.  <br /></td></tr>
 <tr class="separator:a16f2c0514d340d695eee88972dcdf75a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2ad60def52e53df0357bee687360f05"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_utilities_1_1_m_v_p_1_1_presenter.html#ae2ad60def52e53df0357bee687360f05">RemoveViewListeners</a> ()</td></tr>
 <tr class="memdesc:ae2ad60def52e53df0357bee687360f05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method for unsubscribing to events from the View.  <br /></td></tr>
@@ -136,9 +137,9 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a2b5a27039cfd9edccd320002da601da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Base class for presenter in MVP design. This class is responsible of processing events received from the View with information received from ScriptableData (Model) classes. Then, if necessary, calls public methods in the view to affect the visual of the game. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">TV</td><td>The View associated to this Presenter.</td></tr>
+<div class="textblock"><p>Base class for presenter in MVP design. This class is responsible of processing events received from the View with information received from ScriptableData (Model) classes. Then, if necessary, calls public methods in the view to affect the visual of the game. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TV</td><td>The type of data to get.</td></tr>
   </table>
   </dd>
 </dl>
@@ -167,6 +168,8 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Constructor made to cache or get necessary ScriptableData. There is no need to call AddViewListeners methods since its called on Presenter base class. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -193,7 +196,9 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Method for subscribing to events from the View. </p>
+<p>Method for subscribing to events from the View. Note that this method will be called <b>AFTER</b> Presenters subclasses constructors. </p>
+
+<p>Implemented in <a class="el" href="class_bottle_game_1_1_u_i_1_1_presenters_1_1_gameplay_screen_presenter.html#ace1dff448673d4992138f86cc06f4bd4">BottleGame.UI.Presenters.GameplayScreenPresenter</a>, and <a class="el" href="class_bottle_game_1_1_u_i_1_1_presenters_1_1_start_screen_presenter.html#a9179d25ba319c37651013aea4a1ebfb0">BottleGame.UI.Presenters.StartScreenPresenter</a>.</p>
 
 </div>
 </div>
@@ -247,6 +252,8 @@ Protected Attributes</h2></td></tr>
 
 <p>Method for unsubscribing to events from the View. </p>
 
+<p>Implemented in <a class="el" href="class_bottle_game_1_1_u_i_1_1_presenters_1_1_gameplay_screen_presenter.html#a6f307e4cb98d11eb63233d8bb0b63586">BottleGame.UI.Presenters.GameplayScreenPresenter</a>, and <a class="el" href="class_bottle_game_1_1_u_i_1_1_presenters_1_1_start_screen_presenter.html#aeb9408eb7125d7cccbd1e2a4e7a56309">BottleGame.UI.Presenters.StartScreenPresenter</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -260,7 +267,7 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">readonly TV <a class="el" href="class_utilities_1_1_m_v_p_1_1_presenter.html">Utilities.MVP.Presenter</a>&lt; TV &gt;.View</td>
+          <td class="memname">readonly TV <a class="el" href="class_utilities_1_1_m_v_p_1_1_presenter.html">Utilities.MVP.Presenter</a>&lt; TV &gt;.<a class="el" href="class_utilities_1_1_m_v_p_1_1_view.html">View</a></td>
         </tr>
       </table>
   </td>
