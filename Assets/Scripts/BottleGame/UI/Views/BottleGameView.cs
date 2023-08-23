@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using BottleGame.UI.Controls;
+using BottleGame.UI.Presenters;
 using Utilities.MVP;
 
 //using BottleGame.UI.Presenters;
@@ -17,8 +18,8 @@ namespace BottleGame.UI.Views
         [SerializeField] private StartScreenControl startScreenControl;
         [SerializeField] private GameplayScreenControl gameplayScreenControl;
 
-        //private GameplayScreenPresenter _gameplayScreenPresenter;
-        //private StartScreenPresenter _startScreenPresenter;
+        private GameplayScreenPresenter _gameplayScreenPresenter;
+        private StartScreenPresenter _startScreenPresenter;
 
         #region START_SCREEN_EVENTS
 
@@ -38,7 +39,8 @@ namespace BottleGame.UI.Views
         private new void Awake()
         {
             base.Awake();
-            //TODO Add Presenters construction
+            _startScreenPresenter = new StartScreenPresenter(this);
+            _gameplayScreenPresenter = new GameplayScreenPresenter(this);
         }
 
         private void Start()
