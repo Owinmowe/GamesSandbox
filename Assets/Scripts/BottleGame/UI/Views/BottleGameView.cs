@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using BottleGame.UI.Controls;
 using BottleGame.UI.Presenters;
-using Utilities.MVP;
+using General.MVP;
 
 
 namespace BottleGame.UI.Views

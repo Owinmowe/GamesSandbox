@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
-using Utilities.MVP;
+using General.MVP;
 
 namespace BottleGame.UI.Controls
 {

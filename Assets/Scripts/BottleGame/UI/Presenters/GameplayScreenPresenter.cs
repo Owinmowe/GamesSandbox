@@ -1,4 +1,4 @@
-using Utilities.MVP;
+using General.MVP;
 using BottleGame.UI.Views;
 
 namespace BottleGame.UI.Presenters
