@@ -15,11 +15,15 @@ namespace General.MVP
     {
         private Dictionary<Type, ScriptableData> _modelDataDictionary;
 
-        /// <summary>
-        /// This method uses reflection to get all existing ScriptableData and caches the data in a dictionary
-        /// for faster access from Presenters.
-        /// </summary>
-        public void Awake()
+        private void Awake()
+        {
+            CacheScriptableDataTypes();
+        }
+
+        /// This method uses reflection to get all existing ScriptableData types, creates an instance and caches
+        /// the data in a dictionary for faster access from Presenters. This is a conscious trade-off with dynamic
+        /// data types not being able to be added in runtime.
+        private void CacheScriptableDataTypes()
         {
             _modelDataDictionary = new Dictionary<Type, ScriptableData>();
 
@@ -34,13 +38,14 @@ namespace General.MVP
                 _modelDataDictionary.Add(type, scriptableData);
             }
         }
-
+        
         /// <summary>
         /// Method used by Presenters to get ScriptableData based on data type. 
-        /// <typeparam name ="T">The type of data to get.</typeparam>
+        /// <typeparam name ="T">The type of data to get. This data must be a subclass of ScriptableData
+        /// that already exist when the Awake method of this component is called.</typeparam>
         /// <returns>ScriptableData instance of requested type or null if not found.</returns>
         /// </summary>
-        public ScriptableData GetData<T>() where T : ScriptableData
+        public T GetData<T>() where T : ScriptableData
         {
             if (_modelDataDictionary.TryGetValue(typeof(T), out ScriptableData data))
             {
