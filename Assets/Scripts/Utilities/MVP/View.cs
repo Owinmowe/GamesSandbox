@@ -23,11 +23,11 @@ namespace Utilities.MVP
         {
             _modelDataDictionary = new Dictionary<Type, ScriptableData>();
 
-            // We get all possible data type that are assignable to ScriptableData except the base ScriptableData class
+            // We get all possible data type that are assignable to ScriptableData except the base ScriptableData class.
             var allScriptableDataTypes = Assembly.GetExecutingAssembly().GetTypes().Where(
                 type => typeof(ScriptableData).IsAssignableFrom(type) && type != typeof(ScriptableData)).ToArray();
 
-            // Then we create a new instance of each type of ScriptableData type and add it to the dictionary
+            // Then we create a new instance of each type of ScriptableData type and add it to the dictionary.
             foreach (Type type in allScriptableDataTypes)
             {
                 ScriptableData scriptableData = (ScriptableData)Activator.CreateInstance(type);
