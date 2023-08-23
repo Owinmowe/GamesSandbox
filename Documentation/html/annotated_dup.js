@@ -1,6 +1,14 @@
 var annotated_dup =
 [
     [ "BottleGame", "namespace_bottle_game.html", [
+      [ "Core", "namespace_bottle_game_1_1_core.html", [
+        [ "Bottle", "struct_bottle_game_1_1_core_1_1_bottle.html", "struct_bottle_game_1_1_core_1_1_bottle" ],
+        [ "Liquid", "struct_bottle_game_1_1_core_1_1_liquid.html", "struct_bottle_game_1_1_core_1_1_liquid" ]
+      ] ],
+      [ "Data", "namespace_bottle_game_1_1_data.html", [
+        [ "LiquidsType", "class_bottle_game_1_1_data_1_1_liquids_type.html", "class_bottle_game_1_1_data_1_1_liquids_type" ],
+        [ "LiquidTypeData", "struct_bottle_game_1_1_data_1_1_liquid_type_data.html", "struct_bottle_game_1_1_data_1_1_liquid_type_data" ]
+      ] ],
       [ "UI", "namespace_bottle_game_1_1_u_i.html", [
         [ "Controls", "namespace_bottle_game_1_1_u_i_1_1_controls.html", [
           [ "GameplayScreenControl", "class_bottle_game_1_1_u_i_1_1_controls_1_1_gameplay_screen_control.html", "class_bottle_game_1_1_u_i_1_1_controls_1_1_gameplay_screen_control" ],

@@ -36,6 +36,7 @@ var NAVTREE =
         [ "All", "functions.html", null ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
+        [ "Properties", "functions_prop.html", null ],
         [ "Events", "functions_evnt.html", null ]
       ] ]
     ] ],
@@ -47,7 +48,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_bottle_game_view_8cs.html"
+"_bottle_8cs.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['openscreen_0',['OpenScreen',['../class_bottle_game_1_1_u_i_1_1_controls_1_1_gameplay_screen_control.html#adeda662ec9d1b12d47a0e6654f4bded5',1,'BottleGame.UI.Controls.GameplayScreenControl.OpenScreen()'],['../interface_general_1_1_m_v_p_1_1_i_screen_control.html#a6485cf9b86cf354ad5aeadbeed37916b',1,'General.MVP.IScreenControl.OpenScreen()']]]
+  ['equals_0',['Equals',['../struct_bottle_game_1_1_data_1_1_liquid_type_data.html#a06702c88d6394247e69bfd51e5a72dcb',1,'BottleGame.Data.LiquidTypeData.Equals(LiquidTypeData other)'],['../struct_bottle_game_1_1_data_1_1_liquid_type_data.html#a11b3e54045edb37d61294f44f8ad6ef6',1,'BottleGame.Data.LiquidTypeData.Equals(object obj)']]]
 ];
