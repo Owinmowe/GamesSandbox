@@ -8,6 +8,6 @@ namespace Utilities.MVP
     /// </summary>
     public abstract class ScriptableData : ScriptableObject
     {
-        public abstract ScriptableDataType DataType { get; }
+        
     }
 }

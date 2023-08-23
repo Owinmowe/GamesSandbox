@@ -13,7 +13,7 @@ namespace Utilities.MVP
     /// </summary>
     public abstract class View : MonoBehaviour
     {
-        private Dictionary<ScriptableDataType, ScriptableData> _modelDataDictionary;
+        private Dictionary<Type, ScriptableData> _modelDataDictionary;
 
         /// <summary>
         /// This method uses reflection to get all existing ScriptableData and caches the data in a dictionary
@@ -21,27 +21,29 @@ namespace Utilities.MVP
         /// </summary>
         public void Awake()
         {
-            _modelDataDictionary = new Dictionary<ScriptableDataType, ScriptableData>();
+            _modelDataDictionary = new Dictionary<Type, ScriptableData>();
 
+            // We get all possible data type that are assignable to ScriptableData except the base ScriptableData class
             var allScriptableDataTypes = Assembly.GetExecutingAssembly().GetTypes().Where(
                 type => typeof(ScriptableData).IsAssignableFrom(type) && type != typeof(ScriptableData)).ToArray();
 
+            // Then we create a new instance of each type of ScriptableData type and add it to the dictionary
             foreach (Type type in allScriptableDataTypes)
             {
                 ScriptableData scriptableData = (ScriptableData)Activator.CreateInstance(type);
-                _modelDataDictionary.Add(scriptableData.DataType, scriptableData);
+                _modelDataDictionary.Add(type, scriptableData);
             }
         }
 
         /// <summary>Method used by Presenters to get ScriptableData based on enum type.</summary>
-        public ScriptableData GetData<T>(ScriptableDataType dataType) where T : ScriptableData
+        public ScriptableData GetData(Type type)
         {
-            if (_modelDataDictionary.TryGetValue(dataType, out ScriptableData data))
+            if (_modelDataDictionary.TryGetValue(type, out ScriptableData data))
             {
                 return data;
             }
             
-            Debug.LogError("Error in View: " + name + " - Data Type Requested: " + dataType);
+            Debug.LogError("Error in View: " + name + " - Data Type Requested: " + type);
             Debug.LogError("Call to View GetData method returns no valid data.");
             Debug.LogError("Check if corresponding data is added in View in Unity Editor.");
             return null;
