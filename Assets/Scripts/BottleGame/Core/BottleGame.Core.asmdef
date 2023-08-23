@@ -1,0 +1,16 @@
+{
+    "name": "BottleGame.Core",
+    "rootNamespace": "",
+    "references": [
+        "GUID:fcd39286e79ca4a4c8fd0c76e63e5cf6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
