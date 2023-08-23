@@ -35,17 +35,21 @@ namespace Utilities.MVP
             }
         }
 
-        /// <summary>Method used by Presenters to get ScriptableData based on enum type.</summary>
-        public ScriptableData GetData(Type type)
+        /// <summary>
+        /// Method used by Presenters to get ScriptableData based on data type. 
+        /// <typeparam name ="T">The type of data to get.</typeparam>
+        /// <returns>ScriptableData instance of requested type or null if not found.</returns>
+        /// </summary>
+        public ScriptableData GetData<T>() where T : ScriptableData
         {
-            if (_modelDataDictionary.TryGetValue(type, out ScriptableData data))
+            if (_modelDataDictionary.TryGetValue(typeof(T), out ScriptableData data))
             {
-                return data;
+                return (T)data;
             }
-            
-            Debug.LogError("Error in View: " + name + " - Data Type Requested: " + type);
+
+            Debug.LogError("Error in View: " + name + " - Data Type Requested: " + typeof(T));
             Debug.LogError("Call to View GetData method returns no valid data.");
-            Debug.LogError("Check if corresponding data is added in View in Unity Editor.");
+            Debug.LogError("Check if requested data derives from ScriptableData.");
             return null;
         }
     }
