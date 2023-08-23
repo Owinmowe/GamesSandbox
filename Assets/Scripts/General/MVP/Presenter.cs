@@ -1,6 +1,6 @@
 using System;
 
-namespace Utilities.MVP
+namespace General.MVP
 {
     /// <summary>
     /// Base class for presenter in MVP design. This class is responsible of processing events

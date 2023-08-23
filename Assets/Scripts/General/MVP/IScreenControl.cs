@@ -1,4 +1,4 @@
-namespace Utilities.MVP
+namespace General.MVP
 {
     /// <summary>
     /// Base interface for controls in MVP design. This class is an extension of the View

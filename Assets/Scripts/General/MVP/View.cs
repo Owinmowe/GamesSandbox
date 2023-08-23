@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using UnityEngine;
 
-namespace Utilities.MVP
+namespace General.MVP
 {
     /// <summary>
     /// Base class for View in MVP design. This class is responsible of receiving events
