@@ -4,8 +4,6 @@ using BottleGame.UI.Controls;
 using BottleGame.UI.Presenters;
 using Utilities.MVP;
 
-//using BottleGame.UI.Presenters;
-
 
 namespace BottleGame.UI.Views
 {
@@ -76,14 +74,20 @@ namespace BottleGame.UI.Views
 
         #region START_SCREEN_CONTROL
         
+        /// <summary>Method for opening the Start Screen from a Presenter.</summary>
         public void OpenStartScreen() => startScreenControl.OpenScreen();
+        
+        /// <summary>Method for closing the Start Screen from a Presenter.</summary>
         public void CloseStartScreen() => startScreenControl.CloseScreen();
 
         #endregion
 
         #region GAMEPLAY_SCREEN_CONTROL
 
+        /// <summary>Method for opening the Gameplay Screen from a Presenter.</summary>
         public void OpenGameplayScreen() => gameplayScreenControl.OpenScreen();
+        
+        /// <summary>Method for closing the Gameplay Screen from a Presenter.</summary>
         public void CloseGameplayScreen() => gameplayScreenControl.CloseScreen();
 
         #endregion
