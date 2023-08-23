@@ -21,28 +21,32 @@ namespace BottleGame.UI.Views
 
         #region START_SCREEN_EVENTS
 
+        /// <summary>Event called from BottleGameView when StartScreenControl calls the same event.</summary>
         public event Action OnExitButtonEvent;
+        
+        /// <summary>Event called from BottleGameView when StartScreenControl calls the same event.</summary>
         public event Action OnStartButtonEvent;
+        
+        /// <summary>Event called from BottleGameView when StartScreenControl calls the same event.</summary>
         public event Action OnSettingsButtonEvent;
 
         #endregion
         
         #region GAMEPLAY_SCREEN_EVENTS
-
+        
+        /// <summary>Event called from BottleGameView when GameplayScreenControl calls the same event.</summary>
         public event Action OnStartGameEvent;
+        
+        /// <summary>Event called from BottleGameView when GameplayScreenControl calls the same event.</summary>
         public event Action OnBackToMenuButtonEvent;
 
         #endregion
-        
-        private new void Awake()
-        {
-            base.Awake();
-            _startScreenPresenter = new StartScreenPresenter(this);
-            _gameplayScreenPresenter = new GameplayScreenPresenter(this);
-        }
 
         private void Start()
         {
+            _startScreenPresenter = new StartScreenPresenter(this);
+            _gameplayScreenPresenter = new GameplayScreenPresenter(this);
+            
             AddEvents();
             OpenStartScreen();
         }
