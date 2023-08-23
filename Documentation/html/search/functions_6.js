@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['removeviewlisteners_0',['RemoveViewListeners',['../class_bottle_game_1_1_u_i_1_1_presenters_1_1_gameplay_screen_presenter.html#a6f307e4cb98d11eb63233d8bb0b63586',1,'BottleGame.UI.Presenters.GameplayScreenPresenter.RemoveViewListeners()'],['../class_bottle_game_1_1_u_i_1_1_presenters_1_1_start_screen_presenter.html#aeb9408eb7125d7cccbd1e2a4e7a56309',1,'BottleGame.UI.Presenters.StartScreenPresenter.RemoveViewListeners()'],['../class_general_1_1_m_v_p_1_1_presenter.html#ac63225455bb5f5779ad098ba99362af1',1,'General.MVP.Presenter.RemoveViewListeners()']]]
+  ['openscreen_0',['OpenScreen',['../class_bottle_game_1_1_u_i_1_1_controls_1_1_gameplay_screen_control.html#adeda662ec9d1b12d47a0e6654f4bded5',1,'BottleGame.UI.Controls.GameplayScreenControl.OpenScreen()'],['../interface_general_1_1_m_v_p_1_1_i_screen_control.html#a6485cf9b86cf354ad5aeadbeed37916b',1,'General.MVP.IScreenControl.OpenScreen()']]],
+  ['operator_21_3d_1',['operator!=',['../struct_bottle_game_1_1_data_1_1_liquid_type_data.html#a01ef8edb1cb575108c2c6a5c5a40d57d',1,'BottleGame::Data::LiquidTypeData']]],
+  ['operator_3d_3d_2',['operator==',['../struct_bottle_game_1_1_data_1_1_liquid_type_data.html#a056485e402e23850e27e2e57e3fd32ed',1,'BottleGame::Data::LiquidTypeData']]]
 ];
