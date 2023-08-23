@@ -6,7 +6,7 @@ using General.MVP;
 namespace BottleGame.UI.Controls
 {
     /// <summary>
-    /// Control class of the BottleGame. This class implements IScreenControl interface
+    /// Control class of the BottleGame. This class implements IScreenControl interface.
     /// </summary>
     public class GameplayScreenControl : MonoBehaviour, IScreenControl
     {
