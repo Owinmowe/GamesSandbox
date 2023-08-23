@@ -6,7 +6,7 @@ namespace Utilities.MVP
     /// Base class for presenter in MVP design. This class is responsible of processing events
     /// received from the View with information received from ScriptableData (Model) classes.
     /// Then, if necessary, calls public methods in the view to affect the visual of the game.
-    /// <param name="TV">The View associated to this Presenter.</param>
+    /// <typeparam name ="TV">The type of data to get.</typeparam>
     /// </summary>
     public abstract class Presenter<TV> : IDisposable
     {
