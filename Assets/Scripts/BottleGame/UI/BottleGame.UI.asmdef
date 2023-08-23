@@ -1,0 +1,16 @@
+{
+    "name": "BottleGame.UI",
+    "rootNamespace": "",
+    "references": [
+        "GUID:57400e9fcda0f9c49abf3ebefad5f6c4"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
