@@ -12,6 +12,10 @@ namespace Utilities.MVP
     {
         protected readonly TV View;
             
+        /// <summary>
+        /// Constructor made to cache or get necessary ScriptableData. There is no need to call
+        /// AddViewListeners methods since its called on Presenter base class.
+        /// </summary>
         protected Presenter (TV view)
         {
             this.View = view;
@@ -26,10 +30,13 @@ namespace Utilities.MVP
             RemoveViewListeners();
         }
 
-        /// <summary>Method for subscribing to events from the View</summary>
+        /// <summary>
+        /// Method for subscribing to events from the View. Note that this method will be called
+        /// <b>AFTER</b> Presenters subclasses constructors.
+        /// </summary>
         protected abstract void AddViewListeners ();
         
-        /// <summary>Method for unsubscribing to events from the View</summary>
+        /// <summary>Method for unsubscribing to events from the View.</summary>
         protected abstract void RemoveViewListeners ();
     }
 }

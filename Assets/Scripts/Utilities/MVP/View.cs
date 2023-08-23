@@ -17,7 +17,7 @@ namespace Utilities.MVP
 
         /// <summary>
         /// This method uses reflection to get all existing ScriptableData and caches the data in a dictionary
-        /// for faster access from Presenters
+        /// for faster access from Presenters.
         /// </summary>
         public void Awake()
         {
@@ -33,7 +33,7 @@ namespace Utilities.MVP
             }
         }
 
-        /// <summary>Method used by Presenters to get ScriptableData based on enum type</summary>
+        /// <summary>Method used by Presenters to get ScriptableData based on enum type.</summary>
         public ScriptableData GetData<T>(ScriptableDataType dataType) where T : ScriptableData
         {
             if (_modelDataDictionary.TryGetValue(dataType, out ScriptableData data))

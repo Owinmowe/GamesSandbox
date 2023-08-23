@@ -8,6 +8,9 @@ using Utilities.MVP;
 
 namespace BottleGame.UI.Views
 {
+    /// <summary>
+    /// View class of the BottleGame. This class is a subclass of the View class.
+    /// </summary>
     public class BottleGameView : View
     {
         [Header("Controls")] 

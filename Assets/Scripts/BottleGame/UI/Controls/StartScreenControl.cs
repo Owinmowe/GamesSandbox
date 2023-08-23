@@ -5,6 +5,9 @@ using Utilities.MVP;
 
 namespace BottleGame.UI.Controls
 {
+    /// <summary>
+    /// Control class of the BottleGame. This class implements IScreenControl interface
+    /// </summary>
     public class StartScreenControl : MonoBehaviour, IScreenControl
     {
         /// <summary>Event called from StartScreenControl when exit button is pressed</summary>

@@ -5,12 +5,15 @@ using Utilities.MVP;
 
 namespace BottleGame.UI.Controls
 {
+    /// <summary>
+    /// Control class of the BottleGame. This class implements IScreenControl interface
+    /// </summary>
     public class GameplayScreenControl : MonoBehaviour, IScreenControl
     {
-        /// <summary>Event called from GameplayScreenControl when back button is pressed</summary>
+        /// <summary>Event called from GameplayScreenControl when back button is pressed.</summary>
         public event Action OnBackButtonPressed;
         
-        /// <summary>Event called from GameplayScreenControl when game has started</summary>
+        /// <summary>Event called from GameplayScreenControl when game has started.</summary>
         public event Action OnStartGameEvent;
         
         [Header("Buttons")]
@@ -34,14 +37,14 @@ namespace BottleGame.UI.Controls
             // TODO Add hide current bottles functionality
         }
         
-        /// <summary>Method for enabling the GameplayScreen gameObject and calling OnStartGameEvent</summary>
+        /// <summary>Method for enabling the GameplayScreen gameObject and calling OnStartGameEvent.</summary>
         public void OpenScreen()
         {
             gameObject.SetActive(true);
             OnStartGameEvent?.Invoke();
         }
 
-        /// <summary>Method for disabling the GameplayScreen gameObject and hiding all current bottles</summary>
+        /// <summary>Method for disabling the GameplayScreen gameObject and hiding all current bottles.</summary>
         public void CloseScreen()
         {
             HideCurrentBottles();
