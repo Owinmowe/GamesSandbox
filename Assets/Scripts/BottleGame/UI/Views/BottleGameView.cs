@@ -11,8 +11,7 @@ namespace BottleGame.UI.Views
     /// </summary>
     public class BottleGameView : View
     {
-        [Header("Controls")]
-
+        [Header("BottleGame Specific Controls")]
         [SerializeField, Tooltip("GameplayScreenControl reference in scene/prefab.")] 
         private GameplayScreenControl gameplayScreenControl;
 
@@ -40,22 +39,28 @@ namespace BottleGame.UI.Views
         
         private void AddEvents()
         {
-            startScreenControl.OnExitButtonPressed += OnExitButtonEvent;
-            startScreenControl.OnStartButtonPressed += OnStartButtonEvent;
-            startScreenControl.OnSettingsButtonPressed += OnSettingsButtonEvent;
-            startScreenControl.OnStartButtonPressed += OnStartGameEvent;
+            startScreenControl.OnExitButtonPressed += StartScreenOnExitButtonEvent;
+            startScreenControl.OnStartButtonPressed += StartScreenOnPlayButtonEvent;
+            startScreenControl.OnSettingsButtonPressed += StartScreenOnSettingsButtonEvent;
 
+            settingsScreenControl.OnBackButtonPressed += SettingsScreenOnBackButtonEvent;
+            
             gameplayScreenControl.OnBackButtonPressed += OnBackToMenuButtonEvent;
+            
+            startScreenControl.OnStartButtonPressed += OnStartGameEvent;
         }
 
         private void RemoveEvents()
         {
-            startScreenControl.OnExitButtonPressed -= OnExitButtonEvent;
-            startScreenControl.OnStartButtonPressed -= OnStartButtonEvent;
-            startScreenControl.OnSettingsButtonPressed -= OnSettingsButtonEvent;
-            startScreenControl.OnStartButtonPressed -= OnStartGameEvent;
+            startScreenControl.OnExitButtonPressed -= StartScreenOnExitButtonEvent;
+            startScreenControl.OnStartButtonPressed -= StartScreenOnPlayButtonEvent;
+            startScreenControl.OnSettingsButtonPressed -= StartScreenOnSettingsButtonEvent;
+            
+            settingsScreenControl.OnBackButtonPressed -= SettingsScreenOnBackButtonEvent;
             
             gameplayScreenControl.OnBackButtonPressed -= OnBackToMenuButtonEvent;
+            
+            startScreenControl.OnStartButtonPressed -= OnStartGameEvent;
         }
 
         #region GAMEPLAY_SCREEN_CONTROL

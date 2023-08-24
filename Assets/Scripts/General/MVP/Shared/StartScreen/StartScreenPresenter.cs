@@ -21,16 +21,16 @@ namespace General.MVP.Shared.StartScreen
 
         protected override void AddViewListeners()
         {
-            View.OnStartButtonEvent += OnStart;
-            View.OnSettingsButtonEvent += OnSettings;
-            View.OnExitButtonEvent += OnExit;
+            View.StartScreenOnPlayButtonEvent += OnStart;
+            View.StartScreenOnSettingsButtonEvent += OnSettings;
+            View.StartScreenOnExitButtonEvent += OnExit;
         }
 
         protected override void RemoveViewListeners()
         {
-            View.OnStartButtonEvent -= OnStart;
-            View.OnSettingsButtonEvent -= OnSettings;
-            View.OnExitButtonEvent -= OnExit;
+            View.StartScreenOnPlayButtonEvent -= OnStart;
+            View.StartScreenOnSettingsButtonEvent -= OnSettings;
+            View.StartScreenOnExitButtonEvent -= OnExit;
         }
 
         private void OnStart()
@@ -40,7 +40,8 @@ namespace General.MVP.Shared.StartScreen
 
         private void OnSettings()
         {
-            
+            View.CloseStartScreen();
+            View.OpenSettingsScreen();
         }
         
         private void OnExit()
