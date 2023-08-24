@@ -1,12 +1,13 @@
 var indexSectionsWithContent =
 {
-  0: "abcdgioprsv",
-  1: "bgipsv",
+  0: "abcdegiloprstv",
+  1: "bgilpsv",
   2: "bg",
-  3: "bgipsv",
-  4: "acdgoprs",
-  5: "v",
-  6: "o"
+  3: "bgilpsv",
+  4: "abcdegoprst",
+  5: "agltv",
+  6: "bit",
+  7: "o"
 };
 
 var indexSectionNames =
@@ -17,7 +18,8 @@ var indexSectionNames =
   3: "files",
   4: "functions",
   5: "variables",
-  6: "events"
+  6: "properties",
+  7: "events"
 };
 
 var indexSectionLabels =
@@ -28,6 +30,7 @@ var indexSectionLabels =
   3: "Files",
   4: "Functions",
   5: "Variables",
-  6: "Events"
+  6: "Properties",
+  7: "Events"
 };
 

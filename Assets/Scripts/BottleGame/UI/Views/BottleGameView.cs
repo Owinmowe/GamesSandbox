@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using BottleGame.UI.Controls;
-using BottleGame.UI.Presenters;
 using General.MVP;
 
 
@@ -12,12 +11,13 @@ namespace BottleGame.UI.Views
     /// </summary>
     public class BottleGameView : View
     {
-        [Header("Controls")] 
-        [SerializeField] private StartScreenControl startScreenControl;
-        [SerializeField] private GameplayScreenControl gameplayScreenControl;
-
-        private GameplayScreenPresenter _gameplayScreenPresenter;
-        private StartScreenPresenter _startScreenPresenter;
+        [Header("Controls")]
+        
+        [SerializeField, Tooltip("StartScreenControl reference in scene/prefab.")] 
+        private StartScreenControl startScreenControl;
+        
+        [SerializeField, Tooltip("GameplayScreenControl reference in scene/prefab.")] 
+        private GameplayScreenControl gameplayScreenControl;
 
         #region START_SCREEN_EVENTS
 
@@ -42,11 +42,10 @@ namespace BottleGame.UI.Views
 
         #endregion
 
-        private void Start()
+        private async void Start()
         {
-            _startScreenPresenter = new StartScreenPresenter(this);
-            _gameplayScreenPresenter = new GameplayScreenPresenter(this);
-            
+            await CacheScriptableDataTypes();
+            CreateAllPresenters<BottleGameView>(this);
             AddEvents();
             OpenStartScreen();
         }
@@ -55,7 +54,7 @@ namespace BottleGame.UI.Views
         {
             RemoveEvents();
         }
-
+        
         private void AddEvents()
         {
             startScreenControl.OnExitButtonPressed += OnExitButtonEvent;
