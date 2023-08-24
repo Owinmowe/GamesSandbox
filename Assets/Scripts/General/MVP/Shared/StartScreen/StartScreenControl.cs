@@ -1,12 +1,11 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
-using General.MVP;
 
-namespace BottleGame.UI.Controls
+namespace General.MVP.Shared.StartScreen
 {
     /// <summary>
-    /// Control class of the BottleGame. This class implements IScreenControl interface.
+    /// Shared Control class of all games. This class implements IScreenControl interface.
     /// </summary>
     public class StartScreenControl : MonoBehaviour, IScreenControl
     {

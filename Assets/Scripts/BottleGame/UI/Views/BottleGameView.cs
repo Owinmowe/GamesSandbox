@@ -12,26 +12,10 @@ namespace BottleGame.UI.Views
     public class BottleGameView : View
     {
         [Header("Controls")]
-        
-        [SerializeField, Tooltip("StartScreenControl reference in scene/prefab.")] 
-        private StartScreenControl startScreenControl;
-        
+
         [SerializeField, Tooltip("GameplayScreenControl reference in scene/prefab.")] 
         private GameplayScreenControl gameplayScreenControl;
 
-        #region START_SCREEN_EVENTS
-
-        /// <summary>Event called from BottleGameView when StartScreenControl calls the same event.</summary>
-        public event Action OnExitButtonEvent;
-        
-        /// <summary>Event called from BottleGameView when StartScreenControl calls the same event.</summary>
-        public event Action OnStartButtonEvent;
-        
-        /// <summary>Event called from BottleGameView when StartScreenControl calls the same event.</summary>
-        public event Action OnSettingsButtonEvent;
-
-        #endregion
-        
         #region GAMEPLAY_SCREEN_EVENTS
         
         /// <summary>Event called from BottleGameView when GameplayScreenControl calls the same event.</summary>
@@ -44,8 +28,7 @@ namespace BottleGame.UI.Views
 
         private async void Start()
         {
-            await CacheScriptableDataTypes();
-            CreateAllPresenters<BottleGameView>(this);
+            await InitializeView();
             AddEvents();
             OpenStartScreen();
         }
@@ -60,8 +43,8 @@ namespace BottleGame.UI.Views
             startScreenControl.OnExitButtonPressed += OnExitButtonEvent;
             startScreenControl.OnStartButtonPressed += OnStartButtonEvent;
             startScreenControl.OnSettingsButtonPressed += OnSettingsButtonEvent;
+            startScreenControl.OnStartButtonPressed += OnStartGameEvent;
 
-            gameplayScreenControl.OnStartGameEvent += OnStartGameEvent;
             gameplayScreenControl.OnBackButtonPressed += OnBackToMenuButtonEvent;
         }
 
@@ -70,20 +53,10 @@ namespace BottleGame.UI.Views
             startScreenControl.OnExitButtonPressed -= OnExitButtonEvent;
             startScreenControl.OnStartButtonPressed -= OnStartButtonEvent;
             startScreenControl.OnSettingsButtonPressed -= OnSettingsButtonEvent;
+            startScreenControl.OnStartButtonPressed -= OnStartGameEvent;
             
-            gameplayScreenControl.OnStartGameEvent -= OnStartGameEvent;
             gameplayScreenControl.OnBackButtonPressed -= OnBackToMenuButtonEvent;
         }
-
-        #region START_SCREEN_CONTROL
-        
-        /// <summary>Method for opening the Start Screen from a Presenter.</summary>
-        public void OpenStartScreen() => startScreenControl.OpenScreen();
-        
-        /// <summary>Method for closing the Start Screen from a Presenter.</summary>
-        public void CloseStartScreen() => startScreenControl.CloseScreen();
-
-        #endregion
 
         #region GAMEPLAY_SCREEN_CONTROL
 

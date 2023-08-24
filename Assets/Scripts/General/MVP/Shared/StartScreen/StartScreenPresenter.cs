@@ -1,24 +1,20 @@
-using General.MVP;
-using BottleGame.UI.Views;
 using UnityEngine.Scripting;
 
 #if !UNITY_EDITOR
 using UnityEngine;
 #endif
 
-namespace BottleGame.UI.Presenters
+namespace General.MVP.Shared.StartScreen
 {
-    //TODO Improve functionality using a base View to recycle logic in different games in the sandbox (Presenter<View>)
-    
     ///<summary>
-    /// Presenter class of the BottleGame. This class is a subclass of the Presenter class and received
-    /// the BottleGameView in its constructor.
+    /// Shared Presenter class of all games. This class is a subclass of the Presenter class and receives
+    /// a generic View in its constructor.
     /// </summary>
     [Preserve]
-    public class StartScreenPresenter : Presenter<BottleGameView> 
+    public class StartScreenPresenter : Presenter<View> 
     {
         
-        public StartScreenPresenter(BottleGameView view) : base(view)
+        public StartScreenPresenter(View view) : base(view)
         {
             
         }
@@ -40,7 +36,6 @@ namespace BottleGame.UI.Presenters
         private void OnStart()
         {
             View.CloseStartScreen();
-            View.OpenGameplayScreen();
         }
 
         private void OnSettings()
