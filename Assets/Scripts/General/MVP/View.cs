@@ -22,6 +22,9 @@ namespace General.MVP
         
         private Dictionary<Type, ScriptableData> _modelDataDictionary;
         
+        
+        //TODO Add method call with CacheScriptableDataTypes and CreateAllPresenters as Initialization in an Awake 
+
         /// <summary>
         /// Asynchronous Method used by View classes to cache all used ScriptableData. This method uses Addressables
         /// and Assets Label References.
