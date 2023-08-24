@@ -23,16 +23,21 @@ namespace General.MVP
         
         private Dictionary<Type, ScriptableData> _modelDataDictionary;
         
-        
-        //TODO Add method call with CacheScriptableDataTypes and CreateAllPresenters as Initialization in an Awake 
-
         /// <summary>
-        /// Asynchronous Method used by View classes to cache all used ScriptableData. This method uses Addressables
-        /// and Assets Label References.
-        /// <returns>Awaitable <b>System.Threading.Task</b> that completes when all corresponding ScriptableData
-        /// finishes loading.</returns>
+        /// Method used by Views to initialize all ScriptableData and Presenters.
+        /// <returns>Awaitable <b>System.Threading.Task</b> that completes when initialization is completed.</returns>
         /// </summary>
-        protected async Task CacheScriptableDataTypes()
+        protected async Task InitializeView()
+        {
+            await CacheScriptableDataTypes();
+            CreateAllPresenters(this);
+        }
+
+        // Asynchronous Method used by View classes to cache all used ScriptableData. This method uses Addressables
+        // and Assets Label References.
+        // Returns a awaitable System.Threading.Task that completes when all corresponding ScriptableData
+        // finishes loading
+        private async Task CacheScriptableDataTypes()
         {
             _modelDataDictionary = new Dictionary<Type, ScriptableData>();
             
@@ -43,24 +48,23 @@ namespace General.MVP
                 _modelDataDictionary.Add(scriptableData.GetType(), scriptableData);
         }
 
-        /// <summary>
-        /// Method used by View classes to create all Presenters. This method uses reflection on the calling
-        /// and executing Assembly.
-        /// <param name ="view">The View component that will be injected into the Presenters.</param>
-        /// <typeparam name ="T">The type of View that will create the Presenters.</typeparam>
-        /// </summary>
-        protected void CreateAllPresenters<T>(View view)
+        
+        // Method used by View classes to create all Presenters. This method uses reflection on the calling Assembly
+        // and the View type Assembly to find all Presenters in runtime.
+        private void CreateAllPresenters(View view)
         {
-            var generalPresenterTypes = Assembly.GetExecutingAssembly().GetTypes()
-                .Where(type => typeof(Presenter<View>).IsAssignableFrom(type)).ToArray();
+            IEnumerable<Type> generalPresenterTypes = Assembly.GetExecutingAssembly().GetTypes()
+                .Where(type => typeof(Presenter<View>).IsAssignableFrom(type));
             
             foreach (Type type in generalPresenterTypes)
             {
                 Activator.CreateInstance(type, new object[] { view });
             }
             
-            var specificPresenterTypes = Assembly.GetCallingAssembly().GetTypes()
-                .Where(type => typeof(Presenter<T>).IsAssignableFrom(type));
+            Type viewType = view.GetType();
+            Type specificType = typeof(Presenter<>).MakeGenericType(viewType);
+            IEnumerable<Type> specificPresenterTypes = Assembly.GetAssembly(viewType).GetTypes()
+                .Where(type => specificType.IsAssignableFrom(type));
 
             foreach (Type type in specificPresenterTypes)
             {

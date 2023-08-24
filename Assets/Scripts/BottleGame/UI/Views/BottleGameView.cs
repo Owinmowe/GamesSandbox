@@ -28,8 +28,7 @@ namespace BottleGame.UI.Views
 
         private async void Start()
         {
-            await CacheScriptableDataTypes();
-            CreateAllPresenters<BottleGameView>(this);
+            await InitializeView();
             AddEvents();
             OpenStartScreen();
         }
