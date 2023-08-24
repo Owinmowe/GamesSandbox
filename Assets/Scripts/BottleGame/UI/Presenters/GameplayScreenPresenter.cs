@@ -18,22 +18,23 @@ namespace BottleGame.UI.Presenters
 
         protected override void AddViewListeners()
         {
-            View.OnBackToMenuButtonEvent += ReturnToMenu;
+            View.OnBackToMenuButtonEvent += BackToMenu;
             View.OnStartGameEvent += StartGame;
         }
 
         protected override void RemoveViewListeners()
         {
-            View.OnBackToMenuButtonEvent -= ReturnToMenu;
+            View.OnBackToMenuButtonEvent -= BackToMenu;
             View.OnStartGameEvent -= StartGame;
         }
 
         private void StartGame()
         {
-            
+            View.CloseStartScreen();
+            View.OpenGameplayScreen();
         }
 
-        private void ReturnToMenu()
+        private void BackToMenu()
         {
             View.CloseGameplayScreen();
             View.OpenStartScreen();
