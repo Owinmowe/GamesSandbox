@@ -2,6 +2,10 @@ using General.MVP;
 using BottleGame.UI.Views;
 using UnityEngine.Scripting;
 
+#if !UNITY_EDITOR
+using UnityEngine;
+#endif
+
 namespace BottleGame.UI.Presenters
 {
     /// <summary>
