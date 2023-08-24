@@ -92,6 +92,7 @@ $(document).ready(function(){initNavTree('class_general_1_1_m_v_p_1_1_view.html'
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="class_general_1_1_m_v_p_1_1_view-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">General.MVP.View Class Reference</div></div>
 </div><!--header-->
@@ -121,10 +122,100 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>ScriptableData instance of requested type or null if not found.</dd></dl>
  <br /></td></tr>
 <tr class="separator:a55a384e079cf7f89bbd3ee4248f4f66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:ac72ce273aee7a3dd0ce32d2a6c481326"><td class="memItemLeft" align="right" valign="top">async Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_general_1_1_m_v_p_1_1_view.html#ac72ce273aee7a3dd0ce32d2a6c481326">CacheScriptableDataTypes</a> ()</td></tr>
+<tr class="memdesc:ac72ce273aee7a3dd0ce32d2a6c481326"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asynchronous Method used by View classes to cache all used ScriptableData. This method uses Addressables and Assets Label References. </p><dl class="section return"><dt>Returns</dt><dd>Awaitable <b>System.Threading.Task</b> that completes when all corresponding ScriptableData finishes loading.</dd></dl>
+ <br /></td></tr>
+<tr class="separator:ac72ce273aee7a3dd0ce32d2a6c481326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c10435e8183b906a301ccd7325b3f2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_general_1_1_m_v_p_1_1_view.html#a7c10435e8183b906a301ccd7325b3f2c">CreateAllPresenters&lt; T &gt;</a> (<a class="el" href="class_general_1_1_m_v_p_1_1_view.html">View</a> view)</td></tr>
+<tr class="memdesc:a7c10435e8183b906a301ccd7325b3f2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method used by View classes to create all Presenters. This method uses reflection on the calling Assembly. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">view</td><td>The View component that will be injected into the Presenters.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of View that will create the Presenters.</td></tr>
+  </table>
+  </dd>
+</dl>
+ <br /></td></tr>
+<tr class="separator:a7c10435e8183b906a301ccd7325b3f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class for View in MVP design. This class is responsible of receiving events from controls and send that information to the corresponding Presenter. Then receiving actions from the presenter to affect the game or call controls to do it. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac72ce273aee7a3dd0ce32d2a6c481326" name="ac72ce273aee7a3dd0ce32d2a6c481326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac72ce273aee7a3dd0ce32d2a6c481326">&#9670;&#160;</a></span>CacheScriptableDataTypes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">async Task General.MVP.View.CacheScriptableDataTypes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Asynchronous Method used by View classes to cache all used ScriptableData. This method uses Addressables and Assets Label References. </p><dl class="section return"><dt>Returns</dt><dd>Awaitable <b>System.Threading.Task</b> that completes when all corresponding ScriptableData finishes loading.</dd></dl>
+</p>
+
+</div>
+</div>
+<a id="a7c10435e8183b906a301ccd7325b3f2c" name="a7c10435e8183b906a301ccd7325b3f2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c10435e8183b906a301ccd7325b3f2c">&#9670;&#160;</a></span>CreateAllPresenters&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void General.MVP.View.CreateAllPresenters&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_general_1_1_m_v_p_1_1_view.html">View</a>&#160;</td>
+          <td class="paramname"><em>view</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method used by View classes to create all Presenters. This method uses reflection on the calling Assembly. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">view</td><td>The View component that will be injected into the Presenters.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type of View that will create the Presenters.</td></tr>
+  </table>
+  </dd>
+</dl>
+</p>
+
+</div>
+</div>
 <a id="a55a384e079cf7f89bbd3ee4248f4f66d" name="a55a384e079cf7f89bbd3ee4248f4f66d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a55a384e079cf7f89bbd3ee4248f4f66d">&#9670;&#160;</a></span>GetData&lt; T &gt;()</h2>
 
