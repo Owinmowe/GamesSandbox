@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 namespace General.MVP
 {
@@ -13,34 +15,33 @@ namespace General.MVP
     /// </summary>
     public abstract class View : MonoBehaviour
     {
+        
+        [Header("Data")] 
+        [SerializeField, Tooltip("Addressables Asset Label referencing all necessary Data for a given View.")] 
+        private AssetLabelReference scriptableDataLabel;
+        
         private Dictionary<Type, ScriptableData> _modelDataDictionary;
-
-        private void Awake()
-        {
-            CacheScriptableDataTypes();
-        }
-
-        /// This method uses reflection to get all existing ScriptableData types, creates an instance and caches
-        /// the data in a dictionary for faster access from Presenters. This is a conscious trade-off with dynamic
-        /// data types not being able to be added in runtime.
-        private void CacheScriptableDataTypes()
+        
+        /// <summary>
+        /// Asynchronous Method used by View classes to cache all used ScriptableData. This method uses Addressables
+        /// and Assets Label References.
+        /// <returns>Awaitable <b>System.Threading.Task</b> that completes when all corresponding ScriptableData
+        /// finishes loading.</returns>
+        /// </summary>
+        protected async Task CacheScriptableDataTypes()
         {
             _modelDataDictionary = new Dictionary<Type, ScriptableData>();
+            
+            var handle = Addressables.LoadAssetsAsync<ScriptableData>(scriptableDataLabel, null);
+            await handle.Task;
 
-            // We get all possible data type that are assignable to ScriptableData except the base ScriptableData class.
-            var allScriptableDataTypes = Assembly.GetExecutingAssembly().GetTypes().Where(
-                type => typeof(ScriptableData).IsAssignableFrom(type) && type != typeof(ScriptableData)).ToArray();
-
-            // Then we create a new instance of each type of ScriptableData type and add it to the dictionary.
-            foreach (Type type in allScriptableDataTypes)
-            {
-                ScriptableData scriptableData = (ScriptableData)Activator.CreateInstance(type);
-                _modelDataDictionary.Add(type, scriptableData);
-            }
+            foreach (var scriptableData in handle.Result)
+                _modelDataDictionary.Add(scriptableData.GetType(), scriptableData);
         }
 
         /// <summary>
-        /// Method used by View classes to create all Presenters.
+        /// Method used by View classes to create all Presenters. This method uses reflection on the calling
+        /// Assembly.
         /// <param name ="view">The View component that will be injected into the Presenters.</param>
         /// <typeparam name ="T">The type of View that will create the Presenters.</typeparam>
         /// </summary>

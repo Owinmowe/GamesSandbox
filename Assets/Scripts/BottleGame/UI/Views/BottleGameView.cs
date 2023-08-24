@@ -11,9 +11,13 @@ namespace BottleGame.UI.Views
     /// </summary>
     public class BottleGameView : View
     {
-        [Header("Controls")] 
-        [SerializeField] private StartScreenControl startScreenControl;
-        [SerializeField] private GameplayScreenControl gameplayScreenControl;
+        [Header("Controls")]
+        
+        [SerializeField, Tooltip("StartScreenControl reference in scene/prefab.")] 
+        private StartScreenControl startScreenControl;
+        
+        [SerializeField, Tooltip("GameplayScreenControl reference in scene/prefab.")] 
+        private GameplayScreenControl gameplayScreenControl;
 
         #region START_SCREEN_EVENTS
 
@@ -38,8 +42,9 @@ namespace BottleGame.UI.Views
 
         #endregion
 
-        private void Start()
+        private async void Start()
         {
+            await CacheScriptableDataTypes();
             CreateAllPresenters<BottleGameView>(this);
             AddEvents();
             OpenStartScreen();
