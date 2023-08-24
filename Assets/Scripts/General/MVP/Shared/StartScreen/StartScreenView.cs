@@ -1,5 +1,5 @@
-using UnityEngine;
 using System;
+using UnityEngine;
 using General.MVP.Shared.StartScreen;
 
 //Forced namespace as a limitation of partial classes in C# since all parts MUST be in same namespace
@@ -12,13 +12,13 @@ namespace General.MVP
         protected StartScreenControl startScreenControl;
         
         /// <summary>Event called from any View when StartScreenControl calls the same event.</summary>
-        public Action OnExitButtonEvent;
+        public Action StartScreenOnExitButtonEvent;
         
         /// <summary>Event called from any View when StartScreenControl calls the same event.</summary>
-        public Action OnStartButtonEvent;
+        public Action StartScreenOnPlayButtonEvent;
         
         /// <summary>Event called from any View when StartScreenControl calls the same event.</summary>
-        public Action OnSettingsButtonEvent;
+        public Action StartScreenOnSettingsButtonEvent;
         
         /// <summary>Method for opening the Start Screen from a Presenter.</summary>
         public void OpenStartScreen() => startScreenControl.OpenScreen();
