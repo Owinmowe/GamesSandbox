@@ -2,7 +2,7 @@ using UnityEngine;
 using System;
 using General.MVP.Shared.StartScreen;
 
-//Wrong forced as a limitation of partial classes in Unity since all parts MUST be in same namespace
+//Forced namespace as a limitation of partial classes in C# since all parts MUST be in same namespace
 namespace General.MVP
 {
     public abstract partial class View
