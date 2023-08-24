@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['view_0',['View',['../class_general_1_1_m_v_p_1_1_presenter.html#a85147550990a9c97423ea010868cce7c',1,'General::MVP::Presenter']]]
+  ['startscreencontrol_0',['startScreenControl',['../class_general_1_1_m_v_p_1_1_view.html#a500200f5b7762a94ca64a153fbb77f3b',1,'General::MVP::View']]]
 ];
