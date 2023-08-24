@@ -25,18 +25,17 @@ namespace BottleGame.UI.Views
 
         #endregion
 
-        private async void Start()
+        protected override void OnStarted()
         {
-            await InitializeView();
             AddEvents();
             OpenStartScreen();
         }
-        
-        private void OnDestroy()
+
+        protected override void OnDestroyed()
         {
             RemoveEvents();
         }
-        
+
         private void AddEvents()
         {
             startScreenControl.OnExitButtonPressed += StartScreenOnExitButtonEvent;
