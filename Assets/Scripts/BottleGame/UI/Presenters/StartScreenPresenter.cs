@@ -1,5 +1,6 @@
 using General.MVP;
 using BottleGame.UI.Views;
+using UnityEngine.Scripting;
 
 namespace BottleGame.UI.Presenters
 {
@@ -7,6 +8,7 @@ namespace BottleGame.UI.Presenters
     /// Presenter class of the BottleGame. This class is a subclass of the Presenter class and received
     /// the BottleGameView in its constructor.
     /// </summary>
+    [Preserve]
     public class StartScreenPresenter : Presenter<BottleGameView>
     {
         public StartScreenPresenter(BottleGameView view) : base(view)

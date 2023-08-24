@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using BottleGame.UI.Controls;
-using BottleGame.UI.Presenters;
 using General.MVP;
 
 
@@ -15,9 +14,6 @@ namespace BottleGame.UI.Views
         [Header("Controls")] 
         [SerializeField] private StartScreenControl startScreenControl;
         [SerializeField] private GameplayScreenControl gameplayScreenControl;
-
-        private GameplayScreenPresenter _gameplayScreenPresenter;
-        private StartScreenPresenter _startScreenPresenter;
 
         #region START_SCREEN_EVENTS
 
@@ -44,9 +40,7 @@ namespace BottleGame.UI.Views
 
         private void Start()
         {
-            _startScreenPresenter = new StartScreenPresenter(this);
-            _gameplayScreenPresenter = new GameplayScreenPresenter(this);
-            
+            CreateAllPresenters<BottleGameView>(this);
             AddEvents();
             OpenStartScreen();
         }
@@ -55,7 +49,7 @@ namespace BottleGame.UI.Views
         {
             RemoveEvents();
         }
-
+        
         private void AddEvents()
         {
             startScreenControl.OnExitButtonPressed += OnExitButtonEvent;

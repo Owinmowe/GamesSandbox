@@ -38,7 +38,23 @@ namespace General.MVP
                 _modelDataDictionary.Add(type, scriptableData);
             }
         }
-        
+
+        /// <summary>
+        /// Method used by View classes to create all Presenters.
+        /// <param name ="view">The View component that will be injected into the Presenters.</param>
+        /// <typeparam name ="T">The type of View that will create the Presenters.</typeparam>
+        /// </summary>
+        protected void CreateAllPresenters<T>(View view)
+        {
+            var allValidPresenterTypes = Assembly.GetCallingAssembly().GetTypes()
+                .Where(type => typeof(Presenter<T>).IsAssignableFrom(type));
+            
+            foreach (Type type in allValidPresenterTypes)
+            {
+                Activator.CreateInstance(type, new object[] { view });
+            }
+        }
+
         /// <summary>
         /// Method used by Presenters to get ScriptableData based on data type. 
         /// <typeparam name ="T">The type of data to get. This data must be a subclass of ScriptableData
