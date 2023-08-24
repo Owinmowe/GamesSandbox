@@ -75,7 +75,7 @@ namespace BottleGame.Core
         /// <param name ="liquidToAdd">Liquid that will be added to the bottle if possible.</param>
         /// <param name ="liquidExchangeAmount">Amount of liquid exchanged. This can be different than the
         /// provided amount by the liquid since the bottle could be full with only a fraction of the liquid
-        /// amount.</param>
+        /// amount. In case of method returning false this variable is not modified.</param>
         /// <returns>Returns true if liquid could be added to the bottle, otherwise false.</returns>
         /// </summary>
         public bool TryToAddLiquid(Liquid liquidToAdd, ref int liquidExchangeAmount)
