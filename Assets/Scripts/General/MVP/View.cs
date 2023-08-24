@@ -23,11 +23,32 @@ namespace General.MVP
         
         private Dictionary<Type, ScriptableData> _modelDataDictionary;
         
+        private async void Start()
+        {
+            await InitializeView();
+            OnStarted();
+        }
+        
+        private void OnDestroy()
+        {
+            OnDestroyed();
+        }
+
         /// <summary>
-        /// Method used by Views to initialize all ScriptableData and Presenters.
-        /// <returns>Awaitable <b>System.Threading.Task</b> that completes when initialization is completed.</returns>
+        /// Abstract method overriden by Views to have logic when the View component is initialized. This is not
+        /// on the same time as Start method of MonoBehaviours since initializing a View takes time.
         /// </summary>
-        protected async Task InitializeView()
+        protected abstract void OnStarted();
+        
+        /// <summary>
+        /// Abstract Method overriden by Views to have logic when the object gets deleted. This is called on the same
+        /// time as OnDestroy of MonoBehaviours.
+        /// </summary>
+        protected abstract void OnDestroyed();
+        
+        // Method used by Views to initialize all ScriptableData and Presenters.
+        // Returns Awaitable System.Threading.Task that completes when initialization is completed.
+        private async Task InitializeView()
         {
             await CacheScriptableDataTypes();
             CreateAllPresenters(this);
