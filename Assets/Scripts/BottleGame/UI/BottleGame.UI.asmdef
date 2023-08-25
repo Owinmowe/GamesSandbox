@@ -2,7 +2,10 @@
     "name": "BottleGame.UI",
     "rootNamespace": "",
     "references": [
-        "GUID:57400e9fcda0f9c49abf3ebefad5f6c4"
+        "GUID:57400e9fcda0f9c49abf3ebefad5f6c4",
+        "GUID:fcd39286e79ca4a4c8fd0c76e63e5cf6",
+        "GUID:8d55713f80cd43145b222697cdda0e0a",
+        "GUID:a651d0f0f4d41f74692130fd2afc7d52"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

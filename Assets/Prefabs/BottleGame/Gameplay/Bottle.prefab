@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1136146265618557122}
   - component: {fileID: 2938133856546242283}
   - component: {fileID: 7445051806359317017}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Liquid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 2994483083449966509}
   - component: {fileID: 7414504433027969079}
   - component: {fileID: 4077534536476179848}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3581026302962019185}
   m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.5, y: 4, z: 5}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 2691018592179585231}
   - component: {fileID: 1316561652281819651}
   - component: {fileID: 3999228337040400703}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
