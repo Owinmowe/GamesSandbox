@@ -88,12 +88,19 @@ namespace BottleGame.Core
         {
             foreach (var bottle in CurrentBottles)
             {
-                if (bottle.InternalLiquid.Count > 1)
+                if (!IsBottleDone(bottle))
                     return false;
             }
             return true;
         }
-        
+
+        private bool IsBottleDone(Bottle bottle)
+        {
+            bool bottleFull = bottle.InternalLiquid.Count == 1 && bottle.TotalLiquidAmount == bottle.BottleMaxCapacity;
+            bool bottleEmpty = bottle.TotalLiquidAmount == 0;
+            return bottleFull || bottleEmpty;
+        }
+
         private List<Bottle> GetValidBottlesPuzzle(GameplayConfigurationData gameplayConfigurationData)
         {
             List<LiquidTypeData> possibleLiquidTypes = gameplayConfigurationData.possibleLiquids.liquidsTypeData;
