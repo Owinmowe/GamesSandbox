@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['topliquid_0',['TopLiquid',['../struct_bottle_game_1_1_core_1_1_bottle.html#a508d162249abbf1b440ca09527d9f666',1,'BottleGame::Core::Bottle']]],
-  ['totalliquidamount_1',['TotalLiquidAmount',['../struct_bottle_game_1_1_core_1_1_bottle.html#a1c5a92b9c96fc551e77e4690d8beb2e8',1,'BottleGame::Core::Bottle']]],
-  ['trytoaddliquid_2',['TryToAddLiquid',['../struct_bottle_game_1_1_core_1_1_bottle.html#ad3bf1f8cf01390ae2d9f7a195f0bc55c',1,'BottleGame::Core::Bottle']]],
-  ['typedata_3',['TypeData',['../struct_bottle_game_1_1_core_1_1_liquid.html#a356e00d01a91c6265725e5a575fe3e92',1,'BottleGame::Core::Liquid']]]
+  ['removefromtopliquid_0',['RemoveFromTopLiquid',['../struct_bottle_game_1_1_core_1_1_bottle.html#a842c375754148c31a323161f2f1b8f09',1,'BottleGame::Core::Bottle']]],
+  ['removeviewlisteners_1',['RemoveViewListeners',['../class_bottle_game_1_1_u_i_1_1_presenters_1_1_gameplay_screen_presenter.html#a6f307e4cb98d11eb63233d8bb0b63586',1,'BottleGame.UI.Presenters.GameplayScreenPresenter.RemoveViewListeners()'],['../class_general_1_1_m_v_p_1_1_presenter.html#ac63225455bb5f5779ad098ba99362af1',1,'General.MVP.Presenter.RemoveViewListeners()'],['../class_general_1_1_m_v_p_1_1_shared_1_1_settings_screen_1_1_settings_screen_presenter.html#aa6d2c20804a74b3708cf869f64965e44',1,'General.MVP.Shared.SettingsScreen.SettingsScreenPresenter.RemoveViewListeners()'],['../class_general_1_1_m_v_p_1_1_shared_1_1_start_screen_1_1_start_screen_presenter.html#ab4649737f00e63bea27474bbe9f185bd',1,'General.MVP.Shared.StartScreen.StartScreenPresenter.RemoveViewListeners()']]]
 ];

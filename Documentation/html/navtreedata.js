@@ -48,7 +48,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_bottle_8cs.html"
+"_bottle_8cs.html",
+"struct_bottle_game_1_1_core_1_1_bottle.html#a6c9d91d13972b589755d9197dc72f30b"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

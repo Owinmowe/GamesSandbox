@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['initializeview_0',['InitializeView',['../class_general_1_1_m_v_p_1_1_view.html#acdb3cffc709f9ba5d6a770cb0d26a1c0',1,'General::MVP::View']]]
+  ['initializebottles_0',['InitializeBottles',['../class_bottle_game_1_1_game_objects_1_1_bottles_controller.html#a1b4a0fb7fbc7a700dc89c347eed35395',1,'BottleGame::GameObjects::BottlesController']]]
 ];

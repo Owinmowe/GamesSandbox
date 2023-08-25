@@ -91,6 +91,7 @@ $(document).ready(function(){initNavTree('class_bottle_game_1_1_u_i_1_1_views_1_
 
 <div class="header">
   <div class="summary">
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#events">Events</a> &#124;
 <a href="class_bottle_game_1_1_u_i_1_1_views_1_1_bottle_game_view-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">BottleGame.UI.Views.BottleGameView Class Reference</div></div>
@@ -109,11 +110,31 @@ Inheritance diagram for BottleGame.UI.Views.BottleGameView:</div>
   </map>
 </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:ac9d8c8d9b8102c38f203656837094602"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bottle_game_1_1_u_i_1_1_views_1_1_bottle_game_view.html#ac9d8c8d9b8102c38f203656837094602">OnStarted</a> ()</td></tr>
+<tr class="memdesc:ac9d8c8d9b8102c38f203656837094602"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract method overriden by Views to have logic when the View component is initialized. This is not on the same time as Start method of MonoBehaviours since initializing a View takes time.  <br /></td></tr>
+<tr class="separator:ac9d8c8d9b8102c38f203656837094602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bdd1e4785681f95c50cbd8f38d3696b"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bottle_game_1_1_u_i_1_1_views_1_1_bottle_game_view.html#a2bdd1e4785681f95c50cbd8f38d3696b">OnDestroyed</a> ()</td></tr>
+<tr class="memdesc:a2bdd1e4785681f95c50cbd8f38d3696b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract Method overriden by Views to have logic when the object gets deleted. This is called on the same time as OnDestroy of MonoBehaviours.  <br /></td></tr>
+<tr class="separator:a2bdd1e4785681f95c50cbd8f38d3696b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41af131d0ba61c5296862d702ac6641c"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_general_1_1_m_v_p_1_1_view.html#a41af131d0ba61c5296862d702ac6641c">OnStarted</a> ()</td></tr>
+<tr class="memdesc:a41af131d0ba61c5296862d702ac6641c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract method overriden by Views to have logic when the View component is initialized. This is not on the same time as Start method of MonoBehaviours since initializing a View takes time.  <br /></td></tr>
+<tr class="separator:a41af131d0ba61c5296862d702ac6641c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca3ad2451e315eaa58a3601e12b34273"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_general_1_1_m_v_p_1_1_view.html#aca3ad2451e315eaa58a3601e12b34273">OnDestroyed</a> ()</td></tr>
+<tr class="memdesc:aca3ad2451e315eaa58a3601e12b34273"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract Method overriden by Views to have logic when the object gets deleted. This is called on the same time as OnDestroy of MonoBehaviours.  <br /></td></tr>
+<tr class="separator:aca3ad2451e315eaa58a3601e12b34273"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="events" name="events"></a>
 Events</h2></td></tr>
-<tr class="memitem:ab055ec3784e511c23ca21230ef72fbfc"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bottle_game_1_1_u_i_1_1_views_1_1_bottle_game_view.html#ab055ec3784e511c23ca21230ef72fbfc">OnStartGameEvent</a></td></tr>
-<tr class="memdesc:ab055ec3784e511c23ca21230ef72fbfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event called from BottleGameView when GameplayScreenControl calls the same event.  <br /></td></tr>
-<tr class="separator:ab055ec3784e511c23ca21230ef72fbfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a270a8357efaf4c95855dffc2a83871f3"><td class="memItemLeft" align="right" valign="top">Action&lt; <a class="el" href="class_bottle_game_1_1_data_1_1_configuration_1_1_gameplay_configuration_data.html">GameplayConfigurationData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bottle_game_1_1_u_i_1_1_views_1_1_bottle_game_view.html#a270a8357efaf4c95855dffc2a83871f3">OnStartGameEvent</a></td></tr>
+<tr class="memdesc:a270a8357efaf4c95855dffc2a83871f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event called from BottleGameView when GameplayScreenControl calls the same event. <br  />
+ The GameplayConfigurationData is added by the BottleGameView before calling the event.  <br /></td></tr>
+<tr class="separator:a270a8357efaf4c95855dffc2a83871f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a319393d247d2f54b8772894da845024a"><td class="memItemLeft" align="right" valign="top">Action&lt; <a class="el" href="struct_bottle_game_1_1_data_1_1_bottles_mix_data.html">BottlesMixData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bottle_game_1_1_u_i_1_1_views_1_1_bottle_game_view.html#a319393d247d2f54b8772894da845024a">OnBottleMixEvent</a></td></tr>
+<tr class="memdesc:a319393d247d2f54b8772894da845024a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event called from BottleGameView when GameplayScreenControl calls the same event. <br  />
+ The BottleMixData comes from BottleController events.  <br /></td></tr>
+<tr class="separator:a319393d247d2f54b8772894da845024a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a33ca11fbb86a029fd0ef964112591bfb"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bottle_game_1_1_u_i_1_1_views_1_1_bottle_game_view.html#a33ca11fbb86a029fd0ef964112591bfb">OnBackToMenuButtonEvent</a></td></tr>
 <tr class="memdesc:a33ca11fbb86a029fd0ef964112591bfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event called from BottleGameView when GameplayScreenControl calls the same event.  <br /></td></tr>
 <tr class="separator:a33ca11fbb86a029fd0ef964112591bfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,28 +153,88 @@ Additional Inherited Members</h2></td></tr>
  <br /></td></tr>
 <tr class="separator:a55a384e079cf7f89bbd3ee4248f4f66d inherit pub_methods_class_general_1_1_m_v_p_1_1_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_general_1_1_m_v_p_1_1_view"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_general_1_1_m_v_p_1_1_view')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_general_1_1_m_v_p_1_1_view.html">General.MVP.View</a></td></tr>
-<tr class="memitem:aeb004d4665684b898044c72db67b8641 inherit pub_attribs_class_general_1_1_m_v_p_1_1_view"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_general_1_1_m_v_p_1_1_view.html#aeb004d4665684b898044c72db67b8641">OnExitButtonEvent</a></td></tr>
-<tr class="memdesc:aeb004d4665684b898044c72db67b8641 inherit pub_attribs_class_general_1_1_m_v_p_1_1_view"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event called from any View when StartScreenControl calls the same event.  <br /></td></tr>
-<tr class="separator:aeb004d4665684b898044c72db67b8641 inherit pub_attribs_class_general_1_1_m_v_p_1_1_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e3c2d4f2448bed361a85f5f2be2b993 inherit pub_attribs_class_general_1_1_m_v_p_1_1_view"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_general_1_1_m_v_p_1_1_view.html#a8e3c2d4f2448bed361a85f5f2be2b993">OnStartButtonEvent</a></td></tr>
-<tr class="memdesc:a8e3c2d4f2448bed361a85f5f2be2b993 inherit pub_attribs_class_general_1_1_m_v_p_1_1_view"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event called from any View when StartScreenControl calls the same event.  <br /></td></tr>
-<tr class="separator:a8e3c2d4f2448bed361a85f5f2be2b993 inherit pub_attribs_class_general_1_1_m_v_p_1_1_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2fc87c79ca8703cf5633593702f3f26 inherit pub_attribs_class_general_1_1_m_v_p_1_1_view"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_general_1_1_m_v_p_1_1_view.html#aa2fc87c79ca8703cf5633593702f3f26">OnSettingsButtonEvent</a></td></tr>
-<tr class="memdesc:aa2fc87c79ca8703cf5633593702f3f26 inherit pub_attribs_class_general_1_1_m_v_p_1_1_view"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event called from any View when StartScreenControl calls the same event.  <br /></td></tr>
-<tr class="separator:aa2fc87c79ca8703cf5633593702f3f26 inherit pub_attribs_class_general_1_1_m_v_p_1_1_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_class_general_1_1_m_v_p_1_1_view"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_general_1_1_m_v_p_1_1_view')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_general_1_1_m_v_p_1_1_view.html">General.MVP.View</a></td></tr>
-<tr class="memitem:acdb3cffc709f9ba5d6a770cb0d26a1c0 inherit pro_methods_class_general_1_1_m_v_p_1_1_view"><td class="memItemLeft" align="right" valign="top">async Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_general_1_1_m_v_p_1_1_view.html#acdb3cffc709f9ba5d6a770cb0d26a1c0">InitializeView</a> ()</td></tr>
-<tr class="memdesc:acdb3cffc709f9ba5d6a770cb0d26a1c0 inherit pro_methods_class_general_1_1_m_v_p_1_1_view"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method used by Views to initialize all ScriptableData and Presenters. </p><dl class="section return"><dt>Returns</dt><dd>Awaitable <b>System.Threading.Task</b> that completes when initialization is completed.</dd></dl>
- <br /></td></tr>
-<tr class="separator:acdb3cffc709f9ba5d6a770cb0d26a1c0 inherit pro_methods_class_general_1_1_m_v_p_1_1_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72b0dbf220fcdf0235570fef0fd1bf19 inherit pub_attribs_class_general_1_1_m_v_p_1_1_view"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_general_1_1_m_v_p_1_1_view.html#a72b0dbf220fcdf0235570fef0fd1bf19">SettingsScreenOnBackButtonEvent</a></td></tr>
+<tr class="memdesc:a72b0dbf220fcdf0235570fef0fd1bf19 inherit pub_attribs_class_general_1_1_m_v_p_1_1_view"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event called from any View when SettingsControl calls the same event.  <br /></td></tr>
+<tr class="separator:a72b0dbf220fcdf0235570fef0fd1bf19 inherit pub_attribs_class_general_1_1_m_v_p_1_1_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae557d59efb984515362c914aa13c4c25 inherit pub_attribs_class_general_1_1_m_v_p_1_1_view"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_general_1_1_m_v_p_1_1_view.html#ae557d59efb984515362c914aa13c4c25">StartScreenOnExitButtonEvent</a></td></tr>
+<tr class="memdesc:ae557d59efb984515362c914aa13c4c25 inherit pub_attribs_class_general_1_1_m_v_p_1_1_view"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event called from any View when StartScreenControl calls the same event.  <br /></td></tr>
+<tr class="separator:ae557d59efb984515362c914aa13c4c25 inherit pub_attribs_class_general_1_1_m_v_p_1_1_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06ef223ce1cea27ac13975eedab8ea17 inherit pub_attribs_class_general_1_1_m_v_p_1_1_view"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_general_1_1_m_v_p_1_1_view.html#a06ef223ce1cea27ac13975eedab8ea17">StartScreenOnPlayButtonEvent</a></td></tr>
+<tr class="memdesc:a06ef223ce1cea27ac13975eedab8ea17 inherit pub_attribs_class_general_1_1_m_v_p_1_1_view"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event called from any View when StartScreenControl calls the same event.  <br /></td></tr>
+<tr class="separator:a06ef223ce1cea27ac13975eedab8ea17 inherit pub_attribs_class_general_1_1_m_v_p_1_1_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40a7dcc5e1eeb1ba771758133a396c73 inherit pub_attribs_class_general_1_1_m_v_p_1_1_view"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_general_1_1_m_v_p_1_1_view.html#a40a7dcc5e1eeb1ba771758133a396c73">StartScreenOnSettingsButtonEvent</a></td></tr>
+<tr class="memdesc:a40a7dcc5e1eeb1ba771758133a396c73 inherit pub_attribs_class_general_1_1_m_v_p_1_1_view"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event called from any View when StartScreenControl calls the same event.  <br /></td></tr>
+<tr class="separator:a40a7dcc5e1eeb1ba771758133a396c73 inherit pub_attribs_class_general_1_1_m_v_p_1_1_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_general_1_1_m_v_p_1_1_view"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_general_1_1_m_v_p_1_1_view')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_general_1_1_m_v_p_1_1_view.html">General.MVP.View</a></td></tr>
+<tr class="memitem:ac34452a27a3252e7ca5cb03108c11296 inherit pro_attribs_class_general_1_1_m_v_p_1_1_view"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_general_1_1_m_v_p_1_1_shared_1_1_settings_screen_1_1_settings_screen_control.html">SettingsScreenControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_general_1_1_m_v_p_1_1_view.html#ac34452a27a3252e7ca5cb03108c11296">settingsScreenControl</a></td></tr>
+<tr class="memdesc:ac34452a27a3252e7ca5cb03108c11296 inherit pro_attribs_class_general_1_1_m_v_p_1_1_view"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable shared from SettingsScreenView for the corresponding control.  <br /></td></tr>
+<tr class="separator:ac34452a27a3252e7ca5cb03108c11296 inherit pro_attribs_class_general_1_1_m_v_p_1_1_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a500200f5b7762a94ca64a153fbb77f3b inherit pro_attribs_class_general_1_1_m_v_p_1_1_view"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_general_1_1_m_v_p_1_1_shared_1_1_start_screen_1_1_start_screen_control.html">StartScreenControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_general_1_1_m_v_p_1_1_view.html#a500200f5b7762a94ca64a153fbb77f3b">startScreenControl</a></td></tr>
 <tr class="memdesc:a500200f5b7762a94ca64a153fbb77f3b inherit pro_attribs_class_general_1_1_m_v_p_1_1_view"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable shared from StartScreenView for the corresponding control.  <br /></td></tr>
 <tr class="separator:a500200f5b7762a94ca64a153fbb77f3b inherit pro_attribs_class_general_1_1_m_v_p_1_1_view"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>View class of the <a class="el" href="namespace_bottle_game.html">BottleGame</a>. This class is a subclass of the View class. </p>
-</div><h2 class="groupheader">Event Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2bdd1e4785681f95c50cbd8f38d3696b" name="a2bdd1e4785681f95c50cbd8f38d3696b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bdd1e4785681f95c50cbd8f38d3696b">&#9670;&#160;</a></span>OnDestroyed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void BottleGame.UI.Views.BottleGameView.OnDestroyed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Abstract Method overriden by Views to have logic when the object gets deleted. This is called on the same time as OnDestroy of MonoBehaviours. </p>
+
+<p>Implements <a class="el" href="class_general_1_1_m_v_p_1_1_view.html#aca3ad2451e315eaa58a3601e12b34273">General.MVP.View</a>.</p>
+
+</div>
+</div>
+<a id="ac9d8c8d9b8102c38f203656837094602" name="ac9d8c8d9b8102c38f203656837094602"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9d8c8d9b8102c38f203656837094602">&#9670;&#160;</a></span>OnStarted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void BottleGame.UI.Views.BottleGameView.OnStarted </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Abstract method overriden by Views to have logic when the View component is initialized. This is not on the same time as Start method of MonoBehaviours since initializing a View takes time. </p>
+
+<p>Implements <a class="el" href="class_general_1_1_m_v_p_1_1_view.html#a41af131d0ba61c5296862d702ac6641c">General.MVP.View</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Event Documentation</h2>
 <a id="a33ca11fbb86a029fd0ef964112591bfb" name="a33ca11fbb86a029fd0ef964112591bfb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a33ca11fbb86a029fd0ef964112591bfb">&#9670;&#160;</a></span>OnBackToMenuButtonEvent</h2>
 
@@ -170,19 +251,37 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ab055ec3784e511c23ca21230ef72fbfc" name="ab055ec3784e511c23ca21230ef72fbfc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab055ec3784e511c23ca21230ef72fbfc">&#9670;&#160;</a></span>OnStartGameEvent</h2>
+<a id="a319393d247d2f54b8772894da845024a" name="a319393d247d2f54b8772894da845024a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a319393d247d2f54b8772894da845024a">&#9670;&#160;</a></span>OnBottleMixEvent</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Action BottleGame.UI.Views.BottleGameView.OnStartGameEvent</td>
+          <td class="memname">Action&lt; <a class="el" href="struct_bottle_game_1_1_data_1_1_bottles_mix_data.html">BottlesMixData</a>&gt; BottleGame.UI.Views.BottleGameView.OnBottleMixEvent</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Event called from BottleGameView when GameplayScreenControl calls the same event. </p>
+<p>Event called from BottleGameView when GameplayScreenControl calls the same event. <br  />
+ The BottleMixData comes from BottleController events. </p>
+
+</div>
+</div>
+<a id="a270a8357efaf4c95855dffc2a83871f3" name="a270a8357efaf4c95855dffc2a83871f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a270a8357efaf4c95855dffc2a83871f3">&#9670;&#160;</a></span>OnStartGameEvent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action&lt; <a class="el" href="class_bottle_game_1_1_data_1_1_configuration_1_1_gameplay_configuration_data.html">GameplayConfigurationData</a>&gt; BottleGame.UI.Views.BottleGameView.OnStartGameEvent</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Event called from BottleGameView when GameplayScreenControl calls the same event. <br  />
+ The GameplayConfigurationData is added by the BottleGameView before calling the event. </p>
 
 </div>
 </div>
