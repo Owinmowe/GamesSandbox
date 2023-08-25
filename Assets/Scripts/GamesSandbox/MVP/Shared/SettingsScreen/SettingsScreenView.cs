@@ -1,9 +1,9 @@
 using System;
 using UnityEngine;
-using General.MVP.Shared.SettingsScreen;
+using GamesSandbox.MVP.Shared.SettingsScreen;
 
 //Forced namespace as a limitation of partial classes in C# since all parts MUST be in same namespace
-namespace General.MVP
+namespace GamesSandbox.MVP
 {
     public abstract partial class View
     {

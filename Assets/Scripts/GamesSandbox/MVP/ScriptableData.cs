@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace General.MVP
+namespace GamesSandbox.MVP
 {
     /// <summary>
     /// Base class for data created for each MVP screens. This data should only

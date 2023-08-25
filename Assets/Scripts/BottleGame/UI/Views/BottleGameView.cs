@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using BottleGame.Core;
 using BottleGame.Data;
 using UnityEngine;
-using General.MVP;
+using GamesSandbox.MVP;
 using BottleGame.UI.Controls;
 using BottleGame.Data.Configuration;
 

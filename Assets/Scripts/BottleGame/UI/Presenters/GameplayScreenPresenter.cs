@@ -1,7 +1,7 @@
 using BottleGame.Core;
 using BottleGame.Data;
 using BottleGame.Data.Configuration;
-using General.MVP;
+using GamesSandbox.MVP;
 using BottleGame.UI.Views;
 using UnityEngine.Scripting;
 

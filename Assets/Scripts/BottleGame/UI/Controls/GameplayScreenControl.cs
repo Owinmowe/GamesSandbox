@@ -5,7 +5,7 @@ using BottleGame.Data;
 using BottleGame.GameObjects;
 using UnityEngine;
 using UnityEngine.UI;
-using General.MVP;
+using GamesSandbox.MVP;
 
 namespace BottleGame.UI.Controls
 {

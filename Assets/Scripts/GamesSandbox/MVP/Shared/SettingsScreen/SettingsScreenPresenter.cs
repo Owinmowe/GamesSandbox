@@ -4,7 +4,7 @@ using UnityEngine.Scripting;
 using UnityEngine;
 #endif
 
-namespace General.MVP.Shared.SettingsScreen
+namespace GamesSandbox.MVP.Shared.SettingsScreen
 {
     ///<summary>
     /// Shared Presenter class of all games. This class is a subclass of the Presenter class and receives

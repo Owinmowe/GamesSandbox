@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace General.MVP.Shared.SettingsScreen
+namespace GamesSandbox.MVP.Shared.SettingsScreen
 {
     /// <summary>
     /// Shared Settings Control class of all games. This class implements IScreenControl interface.

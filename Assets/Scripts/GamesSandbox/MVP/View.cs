@@ -6,7 +6,7 @@ using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
-namespace General.MVP
+namespace GamesSandbox.MVP
 {
     /// <summary>
     /// Base class for View in MVP design. This class is responsible of receiving events
