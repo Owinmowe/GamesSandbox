@@ -121,6 +121,7 @@ MonoBehaviour:
   scriptableDataLabel:
     m_LabelString: MVP BottleGame
   gameplayScreenControl: {fileID: 8201551553778126004}
+  gameplayConfigurationData: {fileID: 11400000, guid: 97be9eda555ba7b43b1847c73442c130, type: 2}
 --- !u!1001 &1055664683449338392
 PrefabInstance:
   m_ObjectHideFlags: 0

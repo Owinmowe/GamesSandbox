@@ -1,5 +1,6 @@
 var namespace_general_1_1_m_v_p =
 [
+    [ "Shared", "namespace_general_1_1_m_v_p_1_1_shared.html", "namespace_general_1_1_m_v_p_1_1_shared" ],
     [ "IScreenControl", "interface_general_1_1_m_v_p_1_1_i_screen_control.html", "interface_general_1_1_m_v_p_1_1_i_screen_control" ],
     [ "Presenter", "class_general_1_1_m_v_p_1_1_presenter.html", "class_general_1_1_m_v_p_1_1_presenter" ],
     [ "ScriptableData", "class_general_1_1_m_v_p_1_1_scriptable_data.html", null ],

@@ -1,11 +1,11 @@
 var indexSectionsWithContent =
 {
-  0: "abcdegiloprstv",
+  0: "abcdegiloprstuv",
   1: "bgilpsv",
-  2: "bg",
+  2: "bgu",
   3: "bgilpsv",
-  4: "abcdegoprst",
-  5: "agltv",
+  4: "abcdegioprst",
+  5: "aglostv",
   6: "bit",
   7: "o"
 };
