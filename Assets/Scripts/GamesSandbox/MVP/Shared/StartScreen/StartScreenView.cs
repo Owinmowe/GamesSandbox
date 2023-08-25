@@ -7,7 +7,9 @@ namespace GamesSandbox.MVP
 {
     public abstract partial class View
     {
+        
         /// <summary>Variable shared from StartScreenView for the corresponding control.</summary>
+        [Header("Start Screen View")]
         [SerializeField, Tooltip("StartScreenControl reference in scene/prefab.")] 
         protected StartScreenControl startScreenControl;
         
