@@ -1,4 +1,4 @@
-namespace General.MVP
+namespace GamesSandbox.MVP
 {
     /// <summary>
     /// Base interface for controls in MVP design. This class is an extension of the View class

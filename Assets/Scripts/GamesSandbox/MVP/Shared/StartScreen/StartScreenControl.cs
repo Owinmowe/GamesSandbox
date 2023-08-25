@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace General.MVP.Shared.StartScreen
+namespace GamesSandbox.MVP.Shared.StartScreen
 {
     /// <summary>
     /// Shared Control class of all games. This class implements IScreenControl interface.

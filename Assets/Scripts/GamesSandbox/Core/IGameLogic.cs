@@ -1,6 +1,6 @@
 using System;
 
-namespace General.Core
+namespace GamesSandbox.Core
 {
     /// <summary>
     /// Base interface for all gameLogics in the GamesSandbox.  
