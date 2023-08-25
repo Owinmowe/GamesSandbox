@@ -1,5 +1,5 @@
 using UnityEngine;
-using General.MVP;
+using GamesSandbox.MVP;
 
 namespace BottleGame.UI.Data
 {

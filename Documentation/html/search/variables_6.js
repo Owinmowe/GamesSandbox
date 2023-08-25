@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['view_0',['View',['../class_general_1_1_m_v_p_1_1_presenter.html#a85147550990a9c97423ea010868cce7c',1,'General::MVP::Presenter']]]
+  ['liquidstypedata_0',['liquidsTypeData',['../class_bottle_game_1_1_data_1_1_liquids_type.html#ae49af0b9cb7cb64582e7080d7aff625a',1,'BottleGame::Data::LiquidsType']]]
 ];

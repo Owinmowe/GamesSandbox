@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Utilities;
-using General.Core;
+using GamesSandbox.Core;
 using BottleGame.Data;
 using BottleGame.Data.Configuration;
 
