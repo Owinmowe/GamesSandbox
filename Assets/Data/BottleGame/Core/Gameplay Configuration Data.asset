@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 654bc34335761dc4296bef43812de6c4, type: 3}
   m_Name: Gameplay Configuration Data
   m_EditorClassIdentifier: 
-  emptyBottlesAmount: 1
+  emptyBottlesAmount: 2
   fullBottlesAmount: 5
   bottlesMaxCapacity: 100
   bottlesSlotsAmount: 5
