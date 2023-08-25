@@ -5,10 +5,10 @@ using BottleGame.Data;
 namespace BottleGame.GameObjects
 {
     /// <summary>
-    /// Component controller class of the BottleGame. This class is responsible of receiving inputs and control the
-    /// events of BottleObjects based on player input.
+    /// Component controller class of the BottleGame. This class is responsible of receiving inputs and call the
+    /// methods of BottleObjects based on player input.
     /// </summary>
-    public class BottleController : MonoBehaviour
+    public class PlayerController : MonoBehaviour
     {
 
         /// <summary>Event called from BottleController when the player tries to mix two bottles.</summary>
