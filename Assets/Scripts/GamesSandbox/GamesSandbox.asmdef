@@ -1,0 +1,17 @@
+{
+    "name": "GamesSandbox",
+    "rootNamespace": "",
+    "references": [
+        "GUID:0ce2bbcf7bc005e48991fc1d43a50cbe",
+        "GUID:57400e9fcda0f9c49abf3ebefad5f6c4"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

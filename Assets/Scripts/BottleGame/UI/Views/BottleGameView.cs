@@ -1,7 +1,11 @@
 using System;
+using System.Collections.Generic;
+using BottleGame.Core;
+using BottleGame.Data;
 using UnityEngine;
+using GamesSandbox.MVP;
 using BottleGame.UI.Controls;
-using General.MVP;
+using BottleGame.Data.Configuration;
 
 
 namespace BottleGame.UI.Views
@@ -11,80 +15,73 @@ namespace BottleGame.UI.Views
     /// </summary>
     public class BottleGameView : View
     {
-        [Header("Controls")]
-        
-        [SerializeField, Tooltip("StartScreenControl reference in scene/prefab.")] 
-        private StartScreenControl startScreenControl;
-        
+        [Header("BottleGame Specific")]
         [SerializeField, Tooltip("GameplayScreenControl reference in scene/prefab.")] 
         private GameplayScreenControl gameplayScreenControl;
 
-        #region START_SCREEN_EVENTS
+        [SerializeField, Tooltip("Gameplay configuration data used to set the gameplay in the Gameplay Presenter.")] 
+        private GameplayConfigurationData gameplayConfigurationData;
 
-        /// <summary>Event called from BottleGameView when StartScreenControl calls the same event.</summary>
-        public event Action OnExitButtonEvent;
-        
-        /// <summary>Event called from BottleGameView when StartScreenControl calls the same event.</summary>
-        public event Action OnStartButtonEvent;
-        
-        /// <summary>Event called from BottleGameView when StartScreenControl calls the same event.</summary>
-        public event Action OnSettingsButtonEvent;
-
-        #endregion
-        
         #region GAMEPLAY_SCREEN_EVENTS
         
-        /// <summary>Event called from BottleGameView when GameplayScreenControl calls the same event.</summary>
-        public event Action OnStartGameEvent;
+        /// <summary>
+        /// Event called from BottleGameView when GameplayScreenControl calls the same event. <br/>
+        /// The GameplayConfigurationData is added by the BottleGameView before calling the event.
+        /// </summary>
+        public event Action<GameplayConfigurationData> OnStartGameEvent;
+        
+        /// <summary>
+        /// Event called from BottleGameView when GameplayScreenControl calls the same event. <br/>
+        /// The BottleMixData comes from BottleController events.
+        /// </summary>
+        public event Action<BottlesMixData> OnBottleMixEvent;
         
         /// <summary>Event called from BottleGameView when GameplayScreenControl calls the same event.</summary>
         public event Action OnBackToMenuButtonEvent;
 
         #endregion
 
-        private async void Start()
+        protected override void OnStarted()
         {
-            await CacheScriptableDataTypes();
-            CreateAllPresenters<BottleGameView>(this);
             AddEvents();
             OpenStartScreen();
         }
-        
-        private void OnDestroy()
+
+        protected override void OnDestroyed()
         {
             RemoveEvents();
         }
-        
+
         private void AddEvents()
         {
-            startScreenControl.OnExitButtonPressed += OnExitButtonEvent;
-            startScreenControl.OnStartButtonPressed += OnStartButtonEvent;
-            startScreenControl.OnSettingsButtonPressed += OnSettingsButtonEvent;
+            startScreenControl.OnExitButtonPressed += StartScreenOnExitButtonEvent;
+            startScreenControl.OnStartButtonPressed += StartScreenOnPlayButtonEvent;
+            startScreenControl.OnSettingsButtonPressed += StartScreenOnSettingsButtonEvent;
 
-            gameplayScreenControl.OnStartGameEvent += OnStartGameEvent;
+            settingsScreenControl.OnBackButtonPressed += SettingsScreenOnBackButtonEvent;
+            
             gameplayScreenControl.OnBackButtonPressed += OnBackToMenuButtonEvent;
+            gameplayScreenControl.OnBottleMixEvent += OnBottleMixEvent;
+            
+            startScreenControl.OnStartButtonPressed += OnStartGame;
         }
 
         private void RemoveEvents()
         {
-            startScreenControl.OnExitButtonPressed -= OnExitButtonEvent;
-            startScreenControl.OnStartButtonPressed -= OnStartButtonEvent;
-            startScreenControl.OnSettingsButtonPressed -= OnSettingsButtonEvent;
+            startScreenControl.OnExitButtonPressed -= StartScreenOnExitButtonEvent;
+            startScreenControl.OnStartButtonPressed -= StartScreenOnPlayButtonEvent;
+            startScreenControl.OnSettingsButtonPressed -= StartScreenOnSettingsButtonEvent;
             
-            gameplayScreenControl.OnStartGameEvent -= OnStartGameEvent;
+            settingsScreenControl.OnBackButtonPressed -= SettingsScreenOnBackButtonEvent;
+            
             gameplayScreenControl.OnBackButtonPressed -= OnBackToMenuButtonEvent;
+            gameplayScreenControl.OnBottleMixEvent -= OnBottleMixEvent;
+            
+            startScreenControl.OnStartButtonPressed -= OnStartGame;
         }
 
-        #region START_SCREEN_CONTROL
+        private void OnStartGame() => OnStartGameEvent?.Invoke(gameplayConfigurationData);
         
-        /// <summary>Method for opening the Start Screen from a Presenter.</summary>
-        public void OpenStartScreen() => startScreenControl.OpenScreen();
-        
-        /// <summary>Method for closing the Start Screen from a Presenter.</summary>
-        public void CloseStartScreen() => startScreenControl.CloseScreen();
-
-        #endregion
-
         #region GAMEPLAY_SCREEN_CONTROL
 
         /// <summary>Method for opening the Gameplay Screen from a Presenter.</summary>
@@ -92,6 +89,15 @@ namespace BottleGame.UI.Views
         
         /// <summary>Method for closing the Gameplay Screen from a Presenter.</summary>
         public void CloseGameplayScreen() => gameplayScreenControl.CloseScreen();
+        
+        /// <summary>Method for calling the InitializeBottles method in the GameplayScreenControl.</summary>
+        public void InitializeBottles(List<Bottle> bottles) => gameplayScreenControl.InitializeBottles(bottles);
+        
+        /// <summary>Method for calling the UpdateCurrentBottles method in the GameplayScreenControl.</summary>
+        public void UpdateCurrentBottles(List<Bottle> bottles) => gameplayScreenControl.UpdateCurrentBottles(bottles);
+        
+        /// <summary>Method for calling the HideCurrentBottles method in the GameplayScreenControl.</summary>
+        public void HideCurrentBottles() => gameplayScreenControl.DeInitializeBottles();
 
         #endregion
 

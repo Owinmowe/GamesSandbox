@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['trytoaddliquid_0',['TryToAddLiquid',['../struct_bottle_game_1_1_core_1_1_bottle.html#ad3bf1f8cf01390ae2d9f7a195f0bc55c',1,'BottleGame::Core::Bottle']]]
+  ['removefromtopliquid_0',['RemoveFromTopLiquid',['../struct_bottle_game_1_1_core_1_1_bottle.html#a842c375754148c31a323161f2f1b8f09',1,'BottleGame::Core::Bottle']]],
+  ['removeviewlisteners_1',['RemoveViewListeners',['../class_bottle_game_1_1_u_i_1_1_presenters_1_1_gameplay_screen_presenter.html#a6f307e4cb98d11eb63233d8bb0b63586',1,'BottleGame.UI.Presenters.GameplayScreenPresenter.RemoveViewListeners()'],['../class_games_sandbox_1_1_m_v_p_1_1_presenter.html#adc1fefc4f8c569d7f251aa8a1588ce51',1,'GamesSandbox.MVP.Presenter.RemoveViewListeners()'],['../class_games_sandbox_1_1_m_v_p_1_1_shared_1_1_settings_screen_1_1_settings_screen_presenter.html#ac82c6cfe914dde9ce984db02f3feb1d8',1,'GamesSandbox.MVP.Shared.SettingsScreen.SettingsScreenPresenter.RemoveViewListeners()'],['../class_games_sandbox_1_1_m_v_p_1_1_shared_1_1_start_screen_1_1_start_screen_presenter.html#aedccb9939ce4e82193322348c5fd476a',1,'GamesSandbox.MVP.Shared.StartScreen.StartScreenPresenter.RemoveViewListeners()']]]
 ];

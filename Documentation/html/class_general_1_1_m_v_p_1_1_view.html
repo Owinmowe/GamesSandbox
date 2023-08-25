@@ -92,13 +92,16 @@ $(document).ready(function(){initNavTree('class_general_1_1_m_v_p_1_1_view.html'
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_general_1_1_m_v_p_1_1_view-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">General.MVP.View Class Reference</div></div>
+  <div class="headertitle"><div class="title">General.MVP.View Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Base class for View in MVP design. This class is responsible of receiving events from controls and send that information to the corresponding Presenter. Then receiving actions from the presenter to affect the game or call controls to do it.  
+<p>Base class for View in MVP design. This class is responsible of receiving events from controls and send that information to the corresponding Presenter. Then receiving actions from the presenter to affect the game or call controls to do it.<br  />
+ This class is <b>partial</b> so every shared View functionality doesn't clog the main cs file.  
  <a href="class_general_1_1_m_v_p_1_1_view.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for General.MVP.View:</div>
@@ -123,99 +126,43 @@ Public Member Functions</h2></td></tr>
  <br /></td></tr>
 <tr class="separator:a55a384e079cf7f89bbd3ee4248f4f66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a72b0dbf220fcdf0235570fef0fd1bf19"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_general_1_1_m_v_p_1_1_view.html#a72b0dbf220fcdf0235570fef0fd1bf19">SettingsScreenOnBackButtonEvent</a></td></tr>
+<tr class="memdesc:a72b0dbf220fcdf0235570fef0fd1bf19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event called from any View when SettingsControl calls the same event.  <br /></td></tr>
+<tr class="separator:a72b0dbf220fcdf0235570fef0fd1bf19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae557d59efb984515362c914aa13c4c25"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_general_1_1_m_v_p_1_1_view.html#ae557d59efb984515362c914aa13c4c25">StartScreenOnExitButtonEvent</a></td></tr>
+<tr class="memdesc:ae557d59efb984515362c914aa13c4c25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event called from any View when StartScreenControl calls the same event.  <br /></td></tr>
+<tr class="separator:ae557d59efb984515362c914aa13c4c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06ef223ce1cea27ac13975eedab8ea17"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_general_1_1_m_v_p_1_1_view.html#a06ef223ce1cea27ac13975eedab8ea17">StartScreenOnPlayButtonEvent</a></td></tr>
+<tr class="memdesc:a06ef223ce1cea27ac13975eedab8ea17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event called from any View when StartScreenControl calls the same event.  <br /></td></tr>
+<tr class="separator:a06ef223ce1cea27ac13975eedab8ea17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40a7dcc5e1eeb1ba771758133a396c73"><td class="memItemLeft" align="right" valign="top">Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_general_1_1_m_v_p_1_1_view.html#a40a7dcc5e1eeb1ba771758133a396c73">StartScreenOnSettingsButtonEvent</a></td></tr>
+<tr class="memdesc:a40a7dcc5e1eeb1ba771758133a396c73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event called from any View when StartScreenControl calls the same event.  <br /></td></tr>
+<tr class="separator:a40a7dcc5e1eeb1ba771758133a396c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ac72ce273aee7a3dd0ce32d2a6c481326"><td class="memItemLeft" align="right" valign="top">async Task&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_general_1_1_m_v_p_1_1_view.html#ac72ce273aee7a3dd0ce32d2a6c481326">CacheScriptableDataTypes</a> ()</td></tr>
-<tr class="memdesc:ac72ce273aee7a3dd0ce32d2a6c481326"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asynchronous Method used by View classes to cache all used ScriptableData. This method uses Addressables and Assets Label References. </p><dl class="section return"><dt>Returns</dt><dd>Awaitable <b>System.Threading.Task</b> that completes when all corresponding ScriptableData finishes loading.</dd></dl>
- <br /></td></tr>
-<tr class="separator:ac72ce273aee7a3dd0ce32d2a6c481326"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c10435e8183b906a301ccd7325b3f2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_general_1_1_m_v_p_1_1_view.html#a7c10435e8183b906a301ccd7325b3f2c">CreateAllPresenters&lt; T &gt;</a> (<a class="el" href="class_general_1_1_m_v_p_1_1_view.html">View</a> view)</td></tr>
-<tr class="memdesc:a7c10435e8183b906a301ccd7325b3f2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method used by View classes to create all Presenters. This method uses reflection on the calling Assembly. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">view</td><td>The View component that will be injected into the Presenters.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The type of View that will create the Presenters.</td></tr>
-  </table>
-  </dd>
-</dl>
- <br /></td></tr>
-<tr class="separator:a7c10435e8183b906a301ccd7325b3f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41af131d0ba61c5296862d702ac6641c"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_general_1_1_m_v_p_1_1_view.html#a41af131d0ba61c5296862d702ac6641c">OnStarted</a> ()</td></tr>
+<tr class="memdesc:a41af131d0ba61c5296862d702ac6641c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract method overriden by Views to have logic when the View component is initialized. This is not on the same time as Start method of MonoBehaviours since initializing a View takes time.  <br /></td></tr>
+<tr class="separator:a41af131d0ba61c5296862d702ac6641c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca3ad2451e315eaa58a3601e12b34273"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_general_1_1_m_v_p_1_1_view.html#aca3ad2451e315eaa58a3601e12b34273">OnDestroyed</a> ()</td></tr>
+<tr class="memdesc:aca3ad2451e315eaa58a3601e12b34273"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract Method overriden by Views to have logic when the object gets deleted. This is called on the same time as OnDestroy of MonoBehaviours.  <br /></td></tr>
+<tr class="separator:aca3ad2451e315eaa58a3601e12b34273"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:ac34452a27a3252e7ca5cb03108c11296"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_general_1_1_m_v_p_1_1_shared_1_1_settings_screen_1_1_settings_screen_control.html">SettingsScreenControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_general_1_1_m_v_p_1_1_view.html#ac34452a27a3252e7ca5cb03108c11296">settingsScreenControl</a></td></tr>
+<tr class="memdesc:ac34452a27a3252e7ca5cb03108c11296"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable shared from SettingsScreenView for the corresponding control.  <br /></td></tr>
+<tr class="separator:ac34452a27a3252e7ca5cb03108c11296"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a500200f5b7762a94ca64a153fbb77f3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_general_1_1_m_v_p_1_1_shared_1_1_start_screen_1_1_start_screen_control.html">StartScreenControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_general_1_1_m_v_p_1_1_view.html#a500200f5b7762a94ca64a153fbb77f3b">startScreenControl</a></td></tr>
+<tr class="memdesc:a500200f5b7762a94ca64a153fbb77f3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable shared from StartScreenView for the corresponding control.  <br /></td></tr>
+<tr class="separator:a500200f5b7762a94ca64a153fbb77f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Base class for View in MVP design. This class is responsible of receiving events from controls and send that information to the corresponding Presenter. Then receiving actions from the presenter to affect the game or call controls to do it. </p>
+<div class="textblock"><p>Base class for View in MVP design. This class is responsible of receiving events from controls and send that information to the corresponding Presenter. Then receiving actions from the presenter to affect the game or call controls to do it.<br  />
+ This class is <b>partial</b> so every shared View functionality doesn't clog the main cs file. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac72ce273aee7a3dd0ce32d2a6c481326" name="ac72ce273aee7a3dd0ce32d2a6c481326"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac72ce273aee7a3dd0ce32d2a6c481326">&#9670;&#160;</a></span>CacheScriptableDataTypes()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">async Task General.MVP.View.CacheScriptableDataTypes </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Asynchronous Method used by View classes to cache all used ScriptableData. This method uses Addressables and Assets Label References. </p><dl class="section return"><dt>Returns</dt><dd>Awaitable <b>System.Threading.Task</b> that completes when all corresponding ScriptableData finishes loading.</dd></dl>
-</p>
-
-</div>
-</div>
-<a id="a7c10435e8183b906a301ccd7325b3f2c" name="a7c10435e8183b906a301ccd7325b3f2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c10435e8183b906a301ccd7325b3f2c">&#9670;&#160;</a></span>CreateAllPresenters&lt; T &gt;()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void General.MVP.View.CreateAllPresenters&lt; T &gt; </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_general_1_1_m_v_p_1_1_view.html">View</a>&#160;</td>
-          <td class="paramname"><em>view</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Method used by View classes to create all Presenters. This method uses reflection on the calling Assembly. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">view</td><td>The View component that will be injected into the Presenters.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="tparams"><dt>Template Parameters</dt><dd>
-  <table class="tparams">
-    <tr><td class="paramname">T</td><td>The type of View that will create the Presenters.</td></tr>
-  </table>
-  </dd>
-</dl>
-</p>
-
-</div>
-</div>
 <a id="a55a384e079cf7f89bbd3ee4248f4f66d" name="a55a384e079cf7f89bbd3ee4248f4f66d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a55a384e079cf7f89bbd3ee4248f4f66d">&#9670;&#160;</a></span>GetData&lt; T &gt;()</h2>
 
@@ -258,7 +205,180 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a id="aca3ad2451e315eaa58a3601e12b34273" name="aca3ad2451e315eaa58a3601e12b34273"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca3ad2451e315eaa58a3601e12b34273">&#9670;&#160;</a></span>OnDestroyed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void General.MVP.View.OnDestroyed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Abstract Method overriden by Views to have logic when the object gets deleted. This is called on the same time as OnDestroy of MonoBehaviours. </p>
+
+<p>Implemented in <a class="el" href="class_bottle_game_1_1_u_i_1_1_views_1_1_bottle_game_view.html#a2bdd1e4785681f95c50cbd8f38d3696b">BottleGame.UI.Views.BottleGameView</a>.</p>
+
+</div>
+</div>
+<a id="a41af131d0ba61c5296862d702ac6641c" name="a41af131d0ba61c5296862d702ac6641c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41af131d0ba61c5296862d702ac6641c">&#9670;&#160;</a></span>OnStarted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">abstract void General.MVP.View.OnStarted </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Abstract method overriden by Views to have logic when the View component is initialized. This is not on the same time as Start method of MonoBehaviours since initializing a View takes time. </p>
+
+<p>Implemented in <a class="el" href="class_bottle_game_1_1_u_i_1_1_views_1_1_bottle_game_view.html#ac9d8c8d9b8102c38f203656837094602">BottleGame.UI.Views.BottleGameView</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ac34452a27a3252e7ca5cb03108c11296" name="ac34452a27a3252e7ca5cb03108c11296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac34452a27a3252e7ca5cb03108c11296">&#9670;&#160;</a></span>settingsScreenControl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_general_1_1_m_v_p_1_1_shared_1_1_settings_screen_1_1_settings_screen_control.html">SettingsScreenControl</a> General.MVP.View.settingsScreenControl</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Variable shared from SettingsScreenView for the corresponding control. </p>
+
+</div>
+</div>
+<a id="a72b0dbf220fcdf0235570fef0fd1bf19" name="a72b0dbf220fcdf0235570fef0fd1bf19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72b0dbf220fcdf0235570fef0fd1bf19">&#9670;&#160;</a></span>SettingsScreenOnBackButtonEvent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action General.MVP.View.SettingsScreenOnBackButtonEvent</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Event called from any View when SettingsControl calls the same event. </p>
+
+</div>
+</div>
+<a id="a500200f5b7762a94ca64a153fbb77f3b" name="a500200f5b7762a94ca64a153fbb77f3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a500200f5b7762a94ca64a153fbb77f3b">&#9670;&#160;</a></span>startScreenControl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_general_1_1_m_v_p_1_1_shared_1_1_start_screen_1_1_start_screen_control.html">StartScreenControl</a> General.MVP.View.startScreenControl</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Variable shared from StartScreenView for the corresponding control. </p>
+
+</div>
+</div>
+<a id="ae557d59efb984515362c914aa13c4c25" name="ae557d59efb984515362c914aa13c4c25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae557d59efb984515362c914aa13c4c25">&#9670;&#160;</a></span>StartScreenOnExitButtonEvent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action General.MVP.View.StartScreenOnExitButtonEvent</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Event called from any View when StartScreenControl calls the same event. </p>
+
+</div>
+</div>
+<a id="a06ef223ce1cea27ac13975eedab8ea17" name="a06ef223ce1cea27ac13975eedab8ea17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06ef223ce1cea27ac13975eedab8ea17">&#9670;&#160;</a></span>StartScreenOnPlayButtonEvent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action General.MVP.View.StartScreenOnPlayButtonEvent</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Event called from any View when StartScreenControl calls the same event. </p>
+
+</div>
+</div>
+<a id="a40a7dcc5e1eeb1ba771758133a396c73" name="a40a7dcc5e1eeb1ba771758133a396c73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40a7dcc5e1eeb1ba771758133a396c73">&#9670;&#160;</a></span>StartScreenOnSettingsButtonEvent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Action General.MVP.View.StartScreenOnSettingsButtonEvent</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Event called from any View when StartScreenControl calls the same event. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>E:/Proyectos Personales/GamesSandbox/Assets/Scripts/General/MVP/Shared/SettingsScreen/<a class="el" href="_settings_screen_view_8cs.html">SettingsScreenView.cs</a></li>
+<li>E:/Proyectos Personales/GamesSandbox/Assets/Scripts/General/MVP/Shared/StartScreen/<a class="el" href="_start_screen_view_8cs.html">StartScreenView.cs</a></li>
 <li>E:/Proyectos Personales/GamesSandbox/Assets/Scripts/General/MVP/<a class="el" href="_view_8cs.html">View.cs</a></li>
 </ul>
 </div><!-- contents -->

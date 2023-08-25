@@ -1,0 +1,19 @@
+{
+    "name": "BottleGame",
+    "rootNamespace": "",
+    "references": [
+        "GUID:8d55713f80cd43145b222697cdda0e0a",
+        "GUID:fcd39286e79ca4a4c8fd0c76e63e5cf6",
+        "GUID:a651d0f0f4d41f74692130fd2afc7d52",
+        "GUID:d132d1252d790c748b5a84358b055665"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

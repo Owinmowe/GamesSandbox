@@ -1,5 +1,4 @@
 var dir_ac594af9c0a9b4a62ac08bd480e61f86 =
 [
-    [ "GameplayScreenControl.cs", "_gameplay_screen_control_8cs.html", "_gameplay_screen_control_8cs" ],
-    [ "StartScreenControl.cs", "_start_screen_control_8cs.html", "_start_screen_control_8cs" ]
+    [ "GameplayScreenControl.cs", "_gameplay_screen_control_8cs.html", "_gameplay_screen_control_8cs" ]
 ];

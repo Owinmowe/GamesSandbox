@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['liquid_0',['Liquid',['../struct_bottle_game_1_1_core_1_1_liquid.html',1,'BottleGame::Core']]],
-  ['liquid_2ecs_1',['Liquid.cs',['../_liquid_8cs.html',1,'']]],
-  ['liquidstype_2',['LiquidsType',['../class_bottle_game_1_1_data_1_1_liquids_type.html',1,'BottleGame::Data']]],
-  ['liquidstype_2ecs_3',['LiquidsType.cs',['../_liquids_type_8cs.html',1,'']]],
-  ['liquidstypedata_4',['liquidsTypeData',['../class_bottle_game_1_1_data_1_1_liquids_type.html#ae49af0b9cb7cb64582e7080d7aff625a',1,'BottleGame::Data::LiquidsType']]],
-  ['liquidtypedata_5',['LiquidTypeData',['../struct_bottle_game_1_1_data_1_1_liquid_type_data.html',1,'BottleGame::Data']]],
-  ['liquidtypedata_2ecs_6',['LiquidTypeData.cs',['../_liquid_type_data_8cs.html',1,'']]]
+  ['igamelogic_0',['IGameLogic',['../interface_games_sandbox_1_1_core_1_1_i_game_logic.html',1,'GamesSandbox::Core']]],
+  ['igamelogic_2ecs_1',['IGameLogic.cs',['../_i_game_logic_8cs.html',1,'']]],
+  ['indexbottlefrom_2',['IndexBottleFrom',['../struct_bottle_game_1_1_data_1_1_bottles_mix_data.html#a4ea2eda08ca5f6e7dc9a43ecd750586e',1,'BottleGame::Data::BottlesMixData']]],
+  ['indexbottleto_3',['IndexBottleTo',['../struct_bottle_game_1_1_data_1_1_bottles_mix_data.html#a5ba96f9af316568092b2be3b6d3e127e',1,'BottleGame::Data::BottlesMixData']]],
+  ['initializebottles_4',['InitializeBottles',['../class_bottle_game_1_1_game_objects_1_1_bottles_controller.html#a1b4a0fb7fbc7a700dc89c347eed35395',1,'BottleGame::GameObjects::BottlesController']]],
+  ['internalliquid_5',['InternalLiquid',['../struct_bottle_game_1_1_core_1_1_bottle.html#a2d6c127ac91b0e0b31d560cacd598ef5',1,'BottleGame::Core::Bottle']]],
+  ['iscreencontrol_6',['IScreenControl',['../interface_games_sandbox_1_1_m_v_p_1_1_i_screen_control.html',1,'GamesSandbox::MVP']]],
+  ['iscreencontrol_2ecs_7',['IScreenControl.cs',['../_i_screen_control_8cs.html',1,'']]]
 ];
