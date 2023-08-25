@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
@@ -47,8 +47,8 @@ namespace General.MVP
         protected abstract void OnDestroyed();
         
         // Method used by Views to initialize all ScriptableData and Presenters.
-        // Returns Awaitable System.Threading.Task that completes when initialization is completed.
-        private async Task InitializeView()
+        // Returns Awaitable Cysharp.Threading.Tasks UniTask that completes when initialization is completed.
+        private async UniTask InitializeView()
         {
             await CacheScriptableDataTypes();
             CreateAllPresenters(this);
@@ -56,14 +56,14 @@ namespace General.MVP
 
         // Asynchronous Method used by View classes to cache all used ScriptableData. This method uses Addressables
         // and Assets Label References.
-        // Returns a awaitable System.Threading.Task that completes when all corresponding ScriptableData
+        // Returns a awaitable Cysharp.Threading.Tasks UniTask that completes when all corresponding ScriptableData
         // finishes loading
-        private async Task CacheScriptableDataTypes()
+        private async UniTask CacheScriptableDataTypes()
         {
             _modelDataDictionary = new Dictionary<Type, ScriptableData>();
             
             var handle = Addressables.LoadAssetsAsync<ScriptableData>(scriptableDataLabel, null);
-            await handle.Task;
+            await handle.ToUniTask();
 
             foreach (var scriptableData in handle.Result)
                 _modelDataDictionary.Add(scriptableData.GetType(), scriptableData);
