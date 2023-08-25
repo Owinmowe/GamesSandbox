@@ -34,27 +34,27 @@ var annotated_dup =
         ] ]
       ] ]
     ] ],
-    [ "General", "namespace_general.html", [
-      [ "Core", "namespace_general_1_1_core.html", [
-        [ "IGameLogic", "interface_general_1_1_core_1_1_i_game_logic.html", "interface_general_1_1_core_1_1_i_game_logic" ]
+    [ "GamesSandbox", "namespace_games_sandbox.html", [
+      [ "Core", "namespace_games_sandbox_1_1_core.html", [
+        [ "IGameLogic", "interface_games_sandbox_1_1_core_1_1_i_game_logic.html", "interface_games_sandbox_1_1_core_1_1_i_game_logic" ]
       ] ],
-      [ "MVP", "namespace_general_1_1_m_v_p.html", [
-        [ "Shared", "namespace_general_1_1_m_v_p_1_1_shared.html", [
-          [ "SettingsScreen", "namespace_general_1_1_m_v_p_1_1_shared_1_1_settings_screen.html", [
-            [ "SettingsScreenControl", "class_general_1_1_m_v_p_1_1_shared_1_1_settings_screen_1_1_settings_screen_control.html", "class_general_1_1_m_v_p_1_1_shared_1_1_settings_screen_1_1_settings_screen_control" ],
-            [ "SettingsScreenData", "class_general_1_1_m_v_p_1_1_shared_1_1_settings_screen_1_1_settings_screen_data.html", null ],
-            [ "SettingsScreenPresenter", "class_general_1_1_m_v_p_1_1_shared_1_1_settings_screen_1_1_settings_screen_presenter.html", "class_general_1_1_m_v_p_1_1_shared_1_1_settings_screen_1_1_settings_screen_presenter" ]
+      [ "MVP", "namespace_games_sandbox_1_1_m_v_p.html", [
+        [ "Shared", "namespace_games_sandbox_1_1_m_v_p_1_1_shared.html", [
+          [ "SettingsScreen", "namespace_games_sandbox_1_1_m_v_p_1_1_shared_1_1_settings_screen.html", [
+            [ "SettingsScreenControl", "class_games_sandbox_1_1_m_v_p_1_1_shared_1_1_settings_screen_1_1_settings_screen_control.html", "class_games_sandbox_1_1_m_v_p_1_1_shared_1_1_settings_screen_1_1_settings_screen_control" ],
+            [ "SettingsScreenData", "class_games_sandbox_1_1_m_v_p_1_1_shared_1_1_settings_screen_1_1_settings_screen_data.html", null ],
+            [ "SettingsScreenPresenter", "class_games_sandbox_1_1_m_v_p_1_1_shared_1_1_settings_screen_1_1_settings_screen_presenter.html", "class_games_sandbox_1_1_m_v_p_1_1_shared_1_1_settings_screen_1_1_settings_screen_presenter" ]
           ] ],
-          [ "StartScreen", "namespace_general_1_1_m_v_p_1_1_shared_1_1_start_screen.html", [
-            [ "StartScreenControl", "class_general_1_1_m_v_p_1_1_shared_1_1_start_screen_1_1_start_screen_control.html", "class_general_1_1_m_v_p_1_1_shared_1_1_start_screen_1_1_start_screen_control" ],
-            [ "StartScreenData", "class_general_1_1_m_v_p_1_1_shared_1_1_start_screen_1_1_start_screen_data.html", null ],
-            [ "StartScreenPresenter", "class_general_1_1_m_v_p_1_1_shared_1_1_start_screen_1_1_start_screen_presenter.html", "class_general_1_1_m_v_p_1_1_shared_1_1_start_screen_1_1_start_screen_presenter" ]
+          [ "StartScreen", "namespace_games_sandbox_1_1_m_v_p_1_1_shared_1_1_start_screen.html", [
+            [ "StartScreenControl", "class_games_sandbox_1_1_m_v_p_1_1_shared_1_1_start_screen_1_1_start_screen_control.html", "class_games_sandbox_1_1_m_v_p_1_1_shared_1_1_start_screen_1_1_start_screen_control" ],
+            [ "StartScreenData", "class_games_sandbox_1_1_m_v_p_1_1_shared_1_1_start_screen_1_1_start_screen_data.html", null ],
+            [ "StartScreenPresenter", "class_games_sandbox_1_1_m_v_p_1_1_shared_1_1_start_screen_1_1_start_screen_presenter.html", "class_games_sandbox_1_1_m_v_p_1_1_shared_1_1_start_screen_1_1_start_screen_presenter" ]
           ] ]
         ] ],
-        [ "IScreenControl", "interface_general_1_1_m_v_p_1_1_i_screen_control.html", "interface_general_1_1_m_v_p_1_1_i_screen_control" ],
-        [ "Presenter", "class_general_1_1_m_v_p_1_1_presenter.html", "class_general_1_1_m_v_p_1_1_presenter" ],
-        [ "ScriptableData", "class_general_1_1_m_v_p_1_1_scriptable_data.html", null ],
-        [ "View", "class_general_1_1_m_v_p_1_1_view.html", "class_general_1_1_m_v_p_1_1_view" ]
+        [ "IScreenControl", "interface_games_sandbox_1_1_m_v_p_1_1_i_screen_control.html", "interface_games_sandbox_1_1_m_v_p_1_1_i_screen_control" ],
+        [ "Presenter", "class_games_sandbox_1_1_m_v_p_1_1_presenter.html", "class_games_sandbox_1_1_m_v_p_1_1_presenter" ],
+        [ "ScriptableData", "class_games_sandbox_1_1_m_v_p_1_1_scriptable_data.html", null ],
+        [ "View", "class_games_sandbox_1_1_m_v_p_1_1_view.html", "class_games_sandbox_1_1_m_v_p_1_1_view" ]
       ] ]
     ] ]
 ];
