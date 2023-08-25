@@ -1,4 +1,4 @@
-using System.Collections.ObjectModel;
+using System.Collections;
 using UnityEngine;
 
 namespace Utilities
@@ -13,7 +13,7 @@ namespace Utilities
         /// Static method that receives a collection of any type and shuffles it by applying
         /// the <a href="https://en.wikipedia.org/wiki/Fisher–Yates_shuffle">Fisher-Yates shuffle.</a>.
         /// </summary>
-        public static void ShuffleCollection<T> (Collection<T> list)
+        public static void ShuffleCollection (IList list)
         {
             int count = list.Count;
             int last = count - 1;

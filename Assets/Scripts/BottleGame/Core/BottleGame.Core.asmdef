@@ -2,7 +2,9 @@
     "name": "BottleGame.Core",
     "rootNamespace": "",
     "references": [
-        "GUID:fcd39286e79ca4a4c8fd0c76e63e5cf6"
+        "GUID:0ce2bbcf7bc005e48991fc1d43a50cbe",
+        "GUID:fcd39286e79ca4a4c8fd0c76e63e5cf6",
+        "GUID:d17e673994771524b8d6f9a093472c9f"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -7,7 +7,7 @@ namespace BottleGame.Data
     /// Data class for possible liquids type in BottleGame. This class is only modifiable before build time
     /// (Scriptable objects don't work the same way on builds that on editor).
     /// </summary>
-    [CreateAssetMenu(fileName = "Liquids Type", menuName = "BottleGame/Liquids Type", order = 1)]
+    [CreateAssetMenu(fileName = "Liquids Type", menuName = "BottleGame/Core/Liquids Type", order = 1)]
     public class LiquidsType : ScriptableObject
     {
         /// <summary>Possible liquid types data. This includes color.</summary>
