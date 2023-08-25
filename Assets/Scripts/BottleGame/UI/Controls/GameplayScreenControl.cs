@@ -1,4 +1,8 @@
 using System;
+using System.Collections.Generic;
+using BottleGame.Core;
+using BottleGame.Data;
+using BottleGame.GameObjects;
 using UnityEngine;
 using UnityEngine.UI;
 using General.MVP;
@@ -6,57 +10,62 @@ using General.MVP;
 namespace BottleGame.UI.Controls
 {
     /// <summary>
-    /// Control class of the BottleGame. This class implements IScreenControl interface.
+    /// Gameplay Control class of the BottleGame. This class implements IScreenControl interface.
     /// </summary>
     public class GameplayScreenControl : MonoBehaviour, IScreenControl
     {
-        /// <summary>Event called from GameplayScreenControl when back button is pressed.</summary>
+        /// <summary>Event called from GameplayScreenControl when back button is pressed. </summary>
         public event Action OnBackButtonPressed;
         
-        /// <summary>Event called from GameplayScreenControl when game has started.</summary>
-        public event Action OnStartGameEvent;
+        /// <summary>Event called from GameplayScreenControl when BottleController receives a BottleMixEvent. </summary>
+        public event Action<BottlesMixData> OnBottleMixEvent;
         
         [Header("Buttons")]
         [SerializeField] private Button backToMenuButton;
 
+        private PlayerController _currentPlayerController;
+        private BottlesController _currentBottlesController;
+
         private void Awake()
         {
             backToMenuButton.onClick.AddListener(BackToMenuButtonPressed);
-            HideCurrentBottles();
+            
+            _currentPlayerController = FindObjectOfType<PlayerController>(includeInactive: true);
+            _currentBottlesController = FindObjectOfType<BottlesController>(includeInactive: true);
+
+            _currentPlayerController.OnBottlesMixEvent += OnBottleMixEvent;
         }
 
         private void OnDestroy()
         {
             backToMenuButton.onClick.RemoveListener(BackToMenuButtonPressed);
+            
+            _currentPlayerController.OnBottlesMixEvent -= OnBottleMixEvent;
         }
 
         private void BackToMenuButtonPressed() => OnBackButtonPressed?.Invoke();
+
+        /// <summary>Method for calling the InitializeBottles method in the BottlesController.</summary>
+        public void InitializeBottles(List<Bottle> bottles) => _currentBottlesController.InitializeBottles(bottles);
         
-        private void HideCurrentBottles()
-        {
-            // TODO Add hide current bottles functionality
-        }
+        /// <summary>Method for calling the InitializeBottles method in the BottlesController.</summary>
+        public void UpdateCurrentBottles(List<Bottle> bottles) => _currentBottlesController.UpdateCurrentBottles(bottles);
         
+        /// <summary>Method for calling the InitializeBottles method in the BottlesController.</summary>
+        public void DeInitializeBottles() => _currentBottlesController.DeInitializeBottles();
+        
+
         /// <summary>Method for enabling the GameplayScreen gameObject and calling OnStartGameEvent.</summary>
         public void OpenScreen()
         {
             gameObject.SetActive(true);
-            OnStartGameEvent?.Invoke();
         }
 
         /// <summary>Method for disabling the GameplayScreen gameObject and hiding all current bottles.</summary>
         public void CloseScreen()
         {
-            HideCurrentBottles();
+            DeInitializeBottles();
             gameObject.SetActive(false);
         }
-
-        // TODO Add show current bottles functionality
-        /*
-        public void ShowCurrentBottles(List<Bottle> bottles)
-        {
-            
-        }
-        */
     }
 }

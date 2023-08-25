@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['typedata_0',['TypeData',['../struct_bottle_game_1_1_core_1_1_liquid.html#a356e00d01a91c6265725e5a575fe3e92',1,'BottleGame::Core::Liquid']]]
+  ['onexitbuttonevent_0',['OnExitButtonEvent',['../class_general_1_1_m_v_p_1_1_view.html#aeb004d4665684b898044c72db67b8641',1,'General::MVP::View']]],
+  ['onsettingsbuttonevent_1',['OnSettingsButtonEvent',['../class_general_1_1_m_v_p_1_1_view.html#aa2fc87c79ca8703cf5633593702f3f26',1,'General::MVP::View']]],
+  ['onstartbuttonevent_2',['OnStartButtonEvent',['../class_general_1_1_m_v_p_1_1_view.html#a8e3c2d4f2448bed361a85f5f2be2b993',1,'General::MVP::View']]]
 ];
