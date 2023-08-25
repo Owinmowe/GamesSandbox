@@ -146,7 +146,7 @@ namespace BottleGame.Core
                     liquidExchangeAmount -= overflowAmount;
                 }
 
-                if (topLiquid.TypeData == liquidToAdd.TypeData)
+                if (topLiquid.TypeData.Equals(liquidToAdd.TypeData))
                 {
                     // In case of same liquid type we add only one of them with both liquids amount combined.
                     topLiquid.Amount += liquidExchangeAmount;
