@@ -17,7 +17,7 @@ namespace GamesSandbox.MVP
     public abstract partial class View : MonoBehaviour
     {
         
-        [Header("Data")] 
+        [Header("View Data")] 
         [SerializeField, Tooltip("Addressables Asset Label referencing all necessary Data for a given View.")] 
         private AssetLabelReference scriptableDataLabel;
         
