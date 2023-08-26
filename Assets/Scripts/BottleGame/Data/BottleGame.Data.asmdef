@@ -1,3 +1,4 @@
 {
-	"name": "BottleGame.Data"
+	"name": "BottleGame.Data",
+	"references":[ "GUID:0ce2bbcf7bc005e48991fc1d43a50cbe" ]
 }

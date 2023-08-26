@@ -4,6 +4,7 @@ using Utilities;
 using GamesSandbox.Core;
 using BottleGame.Data;
 using BottleGame.Data.Configuration;
+using UnityEngine;
 
 namespace BottleGame.Core
 {
@@ -20,17 +21,24 @@ namespace BottleGame.Core
         
         /// <summary>
         /// This event is called either when the gameplay is completed or when its externally cancelled by
-        /// the StopGame method.
+        /// the StopGame method. 
         /// </summary>
-        public event Action OnGameEnded;
+        public event Action<PostGameData> OnGameEnded;
         
         private readonly GameplayConfigurationData _currentGameplayData;
-        
+        private float _gameStartTime;
+
         /// <summary>
         /// Current logic bottles in the BottleGameLogic.
         /// The bottles only get set after calling the StartGame method. 
         /// </summary>
         public List<Bottle> CurrentBottles { get; private set; }
+        
+        /// <summary>
+        /// Current game state. <br/>
+        /// True after OnGameStarted event is called and false after GameEnded event is called. 
+        /// </summary>
+        public bool GameActive { get; private set; }
         
         /// <summary>
         /// Method used to mix two bottles. This method tries to add the the top liquid from the "FromBottle"
@@ -49,13 +57,23 @@ namespace BottleGame.Core
         public void StartGame()
         {
             CurrentBottles = GetValidBottlesPuzzle(_currentGameplayData);
+            
+            _gameStartTime = Time.time;
+            
             OnGameStarted?.Invoke();
+            GameActive = true;
         }
 
         /// <summary>This method calls the OnGameEnded event. </summary>
         public void StopGame()
         {
-            OnGameEnded?.Invoke();
+            BottleGamePostGameData postGameData = new BottleGamePostGameData
+            {
+                TimeToComplete = Time.time - _gameStartTime
+            };
+            
+            OnGameEnded?.Invoke(postGameData);
+            GameActive = false;
         }
 
         /// <summary>
