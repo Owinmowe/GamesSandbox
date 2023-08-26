@@ -64,7 +64,6 @@ namespace BottleGame.UI.Controls
         /// <summary>Method for disabling the GameplayScreen gameObject and hiding all current bottles.</summary>
         public void CloseScreen()
         {
-            DeInitializeBottles();
             gameObject.SetActive(false);
         }
     }

@@ -2,8 +2,8 @@ using BottleGame.Core;
 using BottleGame.Data;
 using BottleGame.Data.Configuration;
 using GamesSandbox.MVP;
-using BottleGame.UI.Views;
-using UnityEngine;
+using BottleGame.UI.View;
+using GamesSandbox.Core;
 using UnityEngine.Scripting;
 
 namespace BottleGame.UI.Presenters
@@ -26,14 +26,14 @@ namespace BottleGame.UI.Presenters
 
         protected override void AddViewListeners()
         {
-            View.OnBackToMenuButtonEvent += BackToMenu;
+            View.OnGameplayBackToMenuButtonEvent += GameplayBackToMenu;
             View.OnStartGameEvent += StartGame;
             View.OnBottleMixEvent += MixBottles;
         }
 
         protected override void RemoveViewListeners()
         {
-            View.OnBackToMenuButtonEvent -= BackToMenu;
+            View.OnGameplayBackToMenuButtonEvent -= GameplayBackToMenu;
             View.OnStartGameEvent -= StartGame;
             View.OnBottleMixEvent -= MixBottles;
         }
@@ -47,7 +47,7 @@ namespace BottleGame.UI.Presenters
             _bottleGameLogic.StartGame();
         }
 
-        private void BackToMenu()
+        private void GameplayBackToMenu()
         {
             DeInitializeBottleGameLogic();
             View.CloseGameplayScreen();
@@ -66,6 +66,8 @@ namespace BottleGame.UI.Presenters
         {
             if (_bottleGameLogic == null) return;
             
+            View.HideCurrentBottles();
+            
             _bottleGameLogic.OnGameStarted -= OnGameStarted;
             _bottleGameLogic.OnGameEnded -= OnGameEnded;
             _bottleGameLogic = null;
@@ -76,15 +78,21 @@ namespace BottleGame.UI.Presenters
             View.InitializeBottles(_bottleGameLogic.CurrentBottles);
         }
 
-        private void OnGameEnded()
+        private void OnGameEnded(PostGameData postGameData)
         {
-            Debug.Log("Game Ended");
+            DeInitializeBottleGameLogic();
+            View.CloseGameplayScreen();
+            
+            View.SetPostScreenData(postGameData);
+            View.OpenPostGameScreen();
         }
 
         private void MixBottles(BottlesMixData bottlesMixData)
         {
             _bottleGameLogic.MixTwoBottlesLiquid(bottlesMixData);
-            View.UpdateCurrentBottles(_bottleGameLogic.CurrentBottles);
+            
+            if(_bottleGameLogic is { GameActive: true })
+                View.UpdateCurrentBottles(_bottleGameLogic.CurrentBottles);
         }
     }
 }
