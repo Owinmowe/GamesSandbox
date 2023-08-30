@@ -3,20 +3,19 @@ using System.Collections.Generic;
 using BottleGame.Core;
 using BottleGame.Data;
 using UnityEngine;
-using GamesSandbox.MVP;
 using BottleGame.UI.Controls;
 using BottleGame.Data.Configuration;
 
 
-namespace BottleGame.UI.Views
+namespace BottleGame.UI.View
 {
     /// <summary>
     /// View class of the BottleGame. This class is a subclass of the View class.
     /// </summary>
-    public class BottleGameView : View
+    public class BottleGameView : GamesSandbox.MVP.View
     {
         [Header("BottleGame Specific")]
-        [SerializeField, Tooltip("GameplayScreenControl reference in scene/prefab.")] 
+        [SerializeField, Tooltip("GameplayScreenControl reference in scene.")] 
         private GameplayScreenControl gameplayScreenControl;
 
         [SerializeField, Tooltip("Gameplay configuration data used to set the gameplay in the Gameplay Presenter.")] 
@@ -37,7 +36,7 @@ namespace BottleGame.UI.Views
         public event Action<BottlesMixData> OnBottleMixEvent;
         
         /// <summary>Event called from BottleGameView when GameplayScreenControl calls the same event.</summary>
-        public event Action OnBackToMenuButtonEvent;
+        public event Action OnGameplayBackToMenuButtonEvent;
 
         #endregion
 
@@ -60,10 +59,17 @@ namespace BottleGame.UI.Views
 
             settingsScreenControl.OnBackButtonPressed += SettingsScreenOnBackButtonEvent;
             
-            gameplayScreenControl.OnBackButtonPressed += OnBackToMenuButtonEvent;
+            gameplayScreenControl.OnBackButtonPressed += OnGameplayBackToMenuButtonEvent;
             gameplayScreenControl.OnBottleMixEvent += OnBottleMixEvent;
             
+            // TODO Improve Gameplay Presenter StartGame calls
+            // Since GameplayPresenter is a BottleGameView specific Presenter, events that must call methods 
+            // on that presenter must be added separately.
             startScreenControl.OnStartButtonPressed += OnStartGame;
+            postGameScreenControl.OnPostGameResetGameButtonPressed += OnStartGame;
+
+            postGameScreenControl.OnPostGameBackButtonPressed += PostGameScreenOnBackToMenuButtonEvent;
+            postGameScreenControl.OnPostGameResetGameButtonPressed += PostGameScreenOnResetButtonEvent;
         }
 
         private void RemoveEvents()
@@ -74,10 +80,17 @@ namespace BottleGame.UI.Views
             
             settingsScreenControl.OnBackButtonPressed -= SettingsScreenOnBackButtonEvent;
             
-            gameplayScreenControl.OnBackButtonPressed -= OnBackToMenuButtonEvent;
+            gameplayScreenControl.OnBackButtonPressed -= OnGameplayBackToMenuButtonEvent;
             gameplayScreenControl.OnBottleMixEvent -= OnBottleMixEvent;
             
+            // TODO Improve Gameplay Presenter StartGame calls
+            // Since GameplayPresenter is a BottleGameView specific Presenter, events that must call methods 
+            // on that presenter must be added separately.
             startScreenControl.OnStartButtonPressed -= OnStartGame;
+            postGameScreenControl.OnPostGameResetGameButtonPressed -= OnStartGame;
+            
+            postGameScreenControl.OnPostGameBackButtonPressed -= PostGameScreenOnBackToMenuButtonEvent;
+            postGameScreenControl.OnPostGameResetGameButtonPressed -= PostGameScreenOnResetButtonEvent;
         }
 
         private void OnStartGame() => OnStartGameEvent?.Invoke(gameplayConfigurationData);
@@ -99,6 +112,10 @@ namespace BottleGame.UI.Views
         /// <summary>Method for calling the HideCurrentBottles method in the GameplayScreenControl.</summary>
         public void HideCurrentBottles() => gameplayScreenControl.DeInitializeBottles();
 
+        #endregion
+        
+        #region POST_GAME_SCREEN_CONTROL
+        
         #endregion
 
     }
