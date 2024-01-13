@@ -44,6 +44,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 497ced8ec5a4a2c49a182839328e6a69, type: 2}
   - {fileID: 11400000, guid: c472ed8d767c3064c980937db8f7a69a, type: 2}
   - {fileID: 11400000, guid: 1b0abb22cdff74640ad7a781b8bd7d8b, type: 2}
+  - {fileID: 11400000, guid: 037550c4593efad45ace43b85f4ffc1f, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -86,6 +87,7 @@ MonoBehaviour:
     m_LabelNames:
     - default
     - MVP BottleGame
+    - Locale
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 7f1c662e25cdfe74da07eb2e48aecf0a, type: 2}
