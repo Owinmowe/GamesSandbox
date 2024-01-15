@@ -33,15 +33,20 @@ Material:
     - _BottleHeight: 10
     - _BottleMaxY: 1.92
     - _BottleMinY: 1.68
-    - bottom_limit: -4.397
+    - bottom_limit: -1
     - bubbles_alpha: 1
-    - bubbles_bot_fade_limit: 0.25
+    - bubbles_bot_fade_limit: 0.1
     - bubbles_speed: 10
-    - bubbles_top_fade_limit: 0.25
-    - bubbles_transparency: 0.255
+    - bubbles_speed_x: 10
+    - bubbles_speed_y: 15
+    - bubbles_top_fade_limit: 0.1
+    - bubbles_transparency: 0.3
     - liquid_ripple_strength: 2
-    - top_limit: 1.001
-    - top_wave_size: 0.1
+    - top_limit: 1
+    - top_wave_size: -0.1
+    - top_wave_speed: 0
+    - wave_size: 0.1
+    - wave_speed: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}

@@ -6,9 +6,14 @@ Shader "Bottle Game/Unlit Liquid Shader"
         bottom_limit ("Bottom Limit", Float) = -4.397
         
         //TODO Add header with material property drawer
+        wave_size ("Wave Size", Float) = .1
+        wave_speed ("Wave Speed", Float) = 1
+        
+        //TODO Add header with material property drawer
         bubbles_texture ("Bubbles Texture", 2D) = "white" {}
         bubbles_transparency ("Bubbles Transparency", Range(0.0, 1.0)) = 1
-        bubbles_speed ("Bubbles Texture Speed", Float) = 2
+        bubbles_speed_x ("Bubbles Texture X Speed", Float) = 2
+        bubbles_speed_y ("Bubbles Texture Y Speed", Float) = 2
         bubbles_top_fade_limit ("Top Fade Limit", Range(0.0, 5.0)) = 0
         bubbles_bot_fade_limit ("Bot Fade Limit", Range(0.0, 5.0)) = 0
     }
@@ -50,9 +55,12 @@ Shader "Bottle Game/Unlit Liquid Shader"
             float top_limit;
             float bottom_limit;
 
+            float wave_size;
+
             sampler2D bubbles_texture;
             float4 bubbles_texture_ST;
-            float bubbles_speed;
+            float bubbles_speed_x;
+            float bubbles_speed_y;
             float bubbles_transparency;
             float bubbles_top_fade_limit;
             float bubbles_bot_fade_limit;
@@ -62,9 +70,9 @@ Shader "Bottle Game/Unlit Liquid Shader"
                 return (value - from) / (to - from);
             }
             
-            fixed4 get_current_liquid_color(const float z_pos, const float z_amount_current_liquid, const float z_amount_per_liquid_amount)
+            fixed4 get_current_liquid_color(const fragmentData frag_data, const float z_amount_current_liquid, const float z_amount_per_liquid_amount)
             {
-                if(z_pos > z_amount_current_liquid)
+                if(frag_data.object_position.z > z_amount_current_liquid)
                     return fixed4(0,0,0,0);
 
                 float current_amount = 0;
@@ -77,7 +85,7 @@ Shader "Bottle Game/Unlit Liquid Shader"
                         
                     const float color_limit_top = bottom_limit + current_amount * z_amount_per_liquid_amount;
                         
-                    if(z_pos > color_limit_bot && z_pos < color_limit_top)
+                    if(frag_data.object_position.z > color_limit_bot && frag_data.object_position.z < color_limit_top)
                     {
                         return liquid_color_array[i];
                     }
@@ -86,20 +94,24 @@ Shader "Bottle Game/Unlit Liquid Shader"
                 return fixed4(0,0,0,0);
             }
 
-            fixed4 get_current_bubbles_color(const float z_pos, const float2 uv, const float z_amount_current_liquid, const fixed4 liquid_color)
+            fixed4 get_current_bubbles_color(const fragmentData frag_data, const float z_amount_current_liquid, const fixed4 liquid_color)
             {
                 const float fade_start_top = z_amount_current_liquid - bubbles_top_fade_limit;
                 const float fade_start_bot = bottom_limit + bubbles_bot_fade_limit;
-
-                fixed4 bubbles_color = tex2D (bubbles_texture, uv);
                 
-                if(z_pos > fade_start_top)
+                const float fragment_pos_z = frag_data.object_position.z;
+                float2 bubbles_uv = frag_data.uv;
+                bubbles_uv.x += sin(_Time * bubbles_speed_x * fragment_pos_z);                
+                
+                fixed4 bubbles_color = tex2D (bubbles_texture, bubbles_uv);
+                
+                if(frag_data.object_position.z > fade_start_top)
                 {
-                    bubbles_color.a -= inverse_lerp(fade_start_top, z_amount_current_liquid,z_pos);
+                    bubbles_color.a -= inverse_lerp(fade_start_top, z_amount_current_liquid,frag_data.object_position.z);
                 }
-                else if(z_pos < fade_start_bot)
+                else if(frag_data.object_position.z < fade_start_bot)
                 {
-                    bubbles_color.a -= inverse_lerp(fade_start_bot, bottom_limit, z_pos);
+                    bubbles_color.a -= inverse_lerp(fade_start_bot, bottom_limit, frag_data.object_position.z);
                 }
                 
                 return liquid_color * bubbles_color;
@@ -119,9 +131,9 @@ Shader "Bottle Game/Unlit Liquid Shader"
             {
                 fragmentData output;
                 output.uv = TRANSFORM_TEX(vertex_data.uv, bubbles_texture);
-                output.uv.y -= _Time * bubbles_speed;
+                output.uv.y -= _Time * bubbles_speed_y;
                 output.clip_position = UnityObjectToClipPos(vertex_data.vertex);
-                output.object_position = vertex_data.vertex;
+                output.object_position = vertex_data.vertex;              
                 return output;
             }
             
@@ -131,8 +143,8 @@ Shader "Bottle Game/Unlit Liquid Shader"
                 const float z_amount_per_liquid_amount = z_full_bottle_range / bottle_capacity;
                 const float z_amount_current_liquid = bottom_limit + (z_amount_per_liquid_amount * bottle_total_liquid_amount);
 
-                const fixed4 liquid_color = get_current_liquid_color(input.object_position.z, z_amount_current_liquid, z_amount_per_liquid_amount);
-                const fixed4 bubbles_color = get_current_bubbles_color(input.object_position.z, input.uv, z_amount_current_liquid, liquid_color);
+                const fixed4 liquid_color = get_current_liquid_color(input, z_amount_current_liquid, z_amount_per_liquid_amount);
+                const fixed4 bubbles_color = get_current_bubbles_color(input, z_amount_current_liquid, liquid_color);
                 
                 return get_liquid_with_bubbles_mix(liquid_color, bubbles_color);
             }
